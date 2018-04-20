@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AEF208A10E500742C42 /* AppDelegate.m */; };
+		568C5AF3208A10E500742C42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AF2208A10E500742C42 /* ViewController.m */; };
+		568C5AF6208A10E500742C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF4208A10E500742C42 /* Main.storyboard */; };
+		568C5AF8208A10EA00742C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF7208A10EA00742C42 /* Assets.xcassets */; };
+		568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */; };
+		568C5AFE208A10EA00742C42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AFD208A10EA00742C42 /* main.m */; };
+		568C5B08208A10EA00742C42 /* ZhangKeBao_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */; };
+		568C5B13208A10EA00742C42 /* ZhangKeBao_StudentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B12208A10EA00742C42 /* ZhangKeBao_StudentUITests.m */; };
+		568C5B34208A11D900742C42 /* Textfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B27208A11D800742C42 /* Textfield.m */; };
+		568C5B35208A11D900742C42 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B28208A11D800742C42 /* LoginViewController.m */; };
+		568C5B38208A11D900742C42 /* ImputMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2C208A11D800742C42 /* ImputMessage.m */; };
+		568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2D208A11D800742C42 /* RegisterViewController.m */; };
+		568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2E208A11D900742C42 /* AddSpaceView.m */; };
+		568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2F208A11D900742C42 /* ApplicaionAppend.m */; };
+		568C5B3C208A11D900742C42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B31208A11D900742C42 /* LoadingView.m */; };
+		568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B32208A11D900742C42 /* NetWorkManager.m */; };
+		568C5B41208A166A00742C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568C5B3F208A166A00742C42 /* Assets.xcassets */; };
+		568C5B42208A166A00742C42 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 568C5B40208A166A00742C42 /* Base.lproj */; };
+		97D90387608DFDA598612343 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0CC0F4EFF08BADB62281B1 /* libPods-ZhangKeBao-Student.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		568C5B04208A10EA00742C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568C5AE3208A10E400742C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568C5AEA208A10E500742C42;
+			remoteInfo = "ZhangKeBao-Student";
+		};
+		568C5B0F208A10EA00742C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568C5AE3208A10E400742C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568C5AEA208A10E500742C42;
+			remoteInfo = "ZhangKeBao-Student";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
+		568C5AEB208A10E500742C42 /* ZhangKeBao-Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZhangKeBao-Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		568C5AEE208A10E500742C42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		568C5AEF208A10E500742C42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		568C5AF1208A10E500742C42 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		568C5AF2208A10E500742C42 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		568C5AF5208A10E500742C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		568C5AF7208A10EA00742C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		568C5AFA208A10EA00742C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		568C5AFC208A10EA00742C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568C5AFD208A10EA00742C42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		568C5B03208A10EA00742C42 /* ZhangKeBao-StudentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZhangKeBao-StudentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhangKeBao_StudentTests.m; sourceTree = "<group>"; };
+		568C5B09208A10EA00742C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568C5B0E208A10EA00742C42 /* ZhangKeBao-StudentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZhangKeBao-StudentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		568C5B12208A10EA00742C42 /* ZhangKeBao_StudentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhangKeBao_StudentUITests.m; sourceTree = "<group>"; };
+		568C5B14208A10EA00742C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568C5B20208A11D600742C42 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		568C5B22208A11D600742C42 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		568C5B23208A11D600742C42 /* ImputMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImputMessage.h; sourceTree = "<group>"; };
+		568C5B24208A11D700742C42 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		568C5B25208A11D700742C42 /* Textfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Textfield.h; sourceTree = "<group>"; };
+		568C5B26208A11D700742C42 /* AddSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceView.h; sourceTree = "<group>"; };
+		568C5B27208A11D800742C42 /* Textfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Textfield.m; sourceTree = "<group>"; };
+		568C5B28208A11D800742C42 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		568C5B2B208A11D800742C42 /* ApplicaionAppend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicaionAppend.h; sourceTree = "<group>"; };
+		568C5B2C208A11D800742C42 /* ImputMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImputMessage.m; sourceTree = "<group>"; };
+		568C5B2D208A11D800742C42 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		568C5B2E208A11D900742C42 /* AddSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceView.m; sourceTree = "<group>"; };
+		568C5B2F208A11D900742C42 /* ApplicaionAppend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicaionAppend.m; sourceTree = "<group>"; };
+		568C5B30208A11D900742C42 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		568C5B31208A11D900742C42 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		568C5B32208A11D900742C42 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		568C5B3F208A166A00742C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		568C5B40208A166A00742C42 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0CC0F4EFF08BADB62281B1 /* libPods-ZhangKeBao-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhangKeBao-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		568C5AE8208A10E500742C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D90387608DFDA598612343 /* libPods-ZhangKeBao-Student.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5B00208A10EA00742C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5B0B208A10EA00742C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		568C5AE2208A10E400742C42 = {
+			isa = PBXGroup;
+			children = (
+				568C5AED208A10E500742C42 /* ZhangKeBao-Student */,
+				568C5B06208A10EA00742C42 /* ZhangKeBao-StudentTests */,
+				568C5B11208A10EA00742C42 /* ZhangKeBao-StudentUITests */,
+				568C5AEC208A10E500742C42 /* Products */,
+				BD3254E4E4932F4C8DA4696B /* Pods */,
+				99BAE0C97F71B39FFBCE3F7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		568C5AEC208A10E500742C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				568C5AEB208A10E500742C42 /* ZhangKeBao-Student.app */,
+				568C5B03208A10EA00742C42 /* ZhangKeBao-StudentTests.xctest */,
+				568C5B0E208A10EA00742C42 /* ZhangKeBao-StudentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		568C5AED208A10E500742C42 /* ZhangKeBao-Student */ = {
+			isa = PBXGroup;
+			children = (
+				568C5B3F208A166A00742C42 /* Assets.xcassets */,
+				568C5B40208A166A00742C42 /* Base.lproj */,
+				568C5B26208A11D700742C42 /* AddSpaceView.h */,
+				568C5B2E208A11D900742C42 /* AddSpaceView.m */,
+				568C5B2B208A11D800742C42 /* ApplicaionAppend.h */,
+				568C5B2F208A11D900742C42 /* ApplicaionAppend.m */,
+				568C5B23208A11D600742C42 /* ImputMessage.h */,
+				568C5B2C208A11D800742C42 /* ImputMessage.m */,
+				568C5B20208A11D600742C42 /* LoadingView.h */,
+				568C5B31208A11D900742C42 /* LoadingView.m */,
+				568C5B22208A11D600742C42 /* LoginViewController.h */,
+				568C5B28208A11D800742C42 /* LoginViewController.m */,
+				568C5B24208A11D700742C42 /* NetWorkManager.h */,
+				568C5B32208A11D900742C42 /* NetWorkManager.m */,
+				568C5B30208A11D900742C42 /* RegisterViewController.h */,
+				568C5B2D208A11D800742C42 /* RegisterViewController.m */,
+				568C5B25208A11D700742C42 /* Textfield.h */,
+				568C5B27208A11D800742C42 /* Textfield.m */,
+				568C5AEE208A10E500742C42 /* AppDelegate.h */,
+				568C5AEF208A10E500742C42 /* AppDelegate.m */,
+				568C5AF1208A10E500742C42 /* ViewController.h */,
+				568C5AF2208A10E500742C42 /* ViewController.m */,
+				568C5AF4208A10E500742C42 /* Main.storyboard */,
+				568C5AF7208A10EA00742C42 /* Assets.xcassets */,
+				568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */,
+				568C5AFC208A10EA00742C42 /* Info.plist */,
+				568C5AFD208A10EA00742C42 /* main.m */,
+			);
+			path = "ZhangKeBao-Student";
+			sourceTree = "<group>";
+		};
+		568C5B06208A10EA00742C42 /* ZhangKeBao-StudentTests */ = {
+			isa = PBXGroup;
+			children = (
+				568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */,
+				568C5B09208A10EA00742C42 /* Info.plist */,
+			);
+			path = "ZhangKeBao-StudentTests";
+			sourceTree = "<group>";
+		};
+		568C5B11208A10EA00742C42 /* ZhangKeBao-StudentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				568C5B12208A10EA00742C42 /* ZhangKeBao_StudentUITests.m */,
+				568C5B14208A10EA00742C42 /* Info.plist */,
+			);
+			path = "ZhangKeBao-StudentUITests";
+			sourceTree = "<group>";
+		};
+		99BAE0C97F71B39FFBCE3F7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE0CC0F4EFF08BADB62281B1 /* libPods-ZhangKeBao-Student.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD3254E4E4932F4C8DA4696B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */,
+				3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		568C5AEA208A10E500742C42 /* ZhangKeBao-Student */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568C5B17208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-Student" */;
+			buildPhases = (
+				B011B8CAB766BE433DEADFA9 /* [CP] Check Pods Manifest.lock */,
+				568C5AE7208A10E400742C42 /* Sources */,
+				568C5AE8208A10E500742C42 /* Frameworks */,
+				568C5AE9208A10E500742C42 /* Resources */,
+				CE9724DDD4F28329AAA62D16 /* [CP] Embed Pods Frameworks */,
+				F0C55F4603E3FD995573DEEC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZhangKeBao-Student";
+			productName = "ZhangKeBao-Student";
+			productReference = 568C5AEB208A10E500742C42 /* ZhangKeBao-Student.app */;
+			productType = "com.apple.product-type.application";
+		};
+		568C5B02208A10EA00742C42 /* ZhangKeBao-StudentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568C5B1A208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-StudentTests" */;
+			buildPhases = (
+				568C5AFF208A10EA00742C42 /* Sources */,
+				568C5B00208A10EA00742C42 /* Frameworks */,
+				568C5B01208A10EA00742C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				568C5B05208A10EA00742C42 /* PBXTargetDependency */,
+			);
+			name = "ZhangKeBao-StudentTests";
+			productName = "ZhangKeBao-StudentTests";
+			productReference = 568C5B03208A10EA00742C42 /* ZhangKeBao-StudentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		568C5B0D208A10EA00742C42 /* ZhangKeBao-StudentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568C5B1D208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-StudentUITests" */;
+			buildPhases = (
+				568C5B0A208A10EA00742C42 /* Sources */,
+				568C5B0B208A10EA00742C42 /* Frameworks */,
+				568C5B0C208A10EA00742C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				568C5B10208A10EA00742C42 /* PBXTargetDependency */,
+			);
+			name = "ZhangKeBao-StudentUITests";
+			productName = "ZhangKeBao-StudentUITests";
+			productReference = 568C5B0E208A10EA00742C42 /* ZhangKeBao-StudentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		568C5AE3208A10E400742C42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = fjnu;
+				TargetAttributes = {
+					568C5AEA208A10E500742C42 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					568C5B02208A10EA00742C42 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 568C5AEA208A10E500742C42;
+					};
+					568C5B0D208A10EA00742C42 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 568C5AEA208A10E500742C42;
+					};
+				};
+			};
+			buildConfigurationList = 568C5AE6208A10E400742C42 /* Build configuration list for PBXProject "ZhangKeBao-Student" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 568C5AE2208A10E400742C42;
+			productRefGroup = 568C5AEC208A10E500742C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				568C5AEA208A10E500742C42 /* ZhangKeBao-Student */,
+				568C5B02208A10EA00742C42 /* ZhangKeBao-StudentTests */,
+				568C5B0D208A10EA00742C42 /* ZhangKeBao-StudentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		568C5AE9208A10E500742C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */,
+				568C5AF8208A10EA00742C42 /* Assets.xcassets in Resources */,
+				568C5B42208A166A00742C42 /* Base.lproj in Resources */,
+				568C5B41208A166A00742C42 /* Assets.xcassets in Resources */,
+				568C5AF6208A10E500742C42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5B01208A10EA00742C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5B0C208A10EA00742C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B011B8CAB766BE433DEADFA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZhangKeBao-Student-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9724DDD4F28329AAA62D16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C55F4603E3FD995573DEEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh",
+				"${PODS_ROOT}/FRNavigationController/FRNavigationController/FRNavigationController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FRNavigationController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		568C5AE7208A10E400742C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
+				568C5AF3208A10E500742C42 /* ViewController.m in Sources */,
+				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
+				568C5AFE208A10EA00742C42 /* main.m in Sources */,
+				568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */,
+				568C5B38208A11D900742C42 /* ImputMessage.m in Sources */,
+				568C5B3C208A11D900742C42 /* LoadingView.m in Sources */,
+				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
+				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
+				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
+				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5AFF208A10EA00742C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568C5B08208A10EA00742C42 /* ZhangKeBao_StudentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568C5B0A208A10EA00742C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568C5B13208A10EA00742C42 /* ZhangKeBao_StudentUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		568C5B05208A10EA00742C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568C5AEA208A10E500742C42 /* ZhangKeBao-Student */;
+			targetProxy = 568C5B04208A10EA00742C42 /* PBXContainerItemProxy */;
+		};
+		568C5B10208A10EA00742C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568C5AEA208A10E500742C42 /* ZhangKeBao-Student */;
+			targetProxy = 568C5B0F208A10EA00742C42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		568C5AF4208A10E500742C42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568C5AF5208A10E500742C42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568C5AFA208A10EA00742C42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		568C5B15208A10EA00742C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		568C5B16208A10EA00742C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		568C5B18208A10EA00742C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		568C5B19208A10EA00742C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		568C5B1B208A10EA00742C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhangKeBao-Student.app/ZhangKeBao-Student";
+			};
+			name = Debug;
+		};
+		568C5B1C208A10EA00742C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhangKeBao-Student.app/ZhangKeBao-Student";
+			};
+			name = Release;
+		};
+		568C5B1E208A10EA00742C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ZhangKeBao-Student";
+			};
+			name = Debug;
+		};
+		568C5B1F208A10EA00742C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ZhangKeBao-Student";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		568C5AE6208A10E400742C42 /* Build configuration list for PBXProject "ZhangKeBao-Student" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568C5B15208A10EA00742C42 /* Debug */,
+				568C5B16208A10EA00742C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568C5B17208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-Student" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568C5B18208A10EA00742C42 /* Debug */,
+				568C5B19208A10EA00742C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568C5B1A208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-StudentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568C5B1B208A10EA00742C42 /* Debug */,
+				568C5B1C208A10EA00742C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568C5B1D208A10EA00742C42 /* Build configuration list for PBXNativeTarget "ZhangKeBao-StudentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568C5B1E208A10EA00742C42 /* Debug */,
+				568C5B1F208A10EA00742C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 568C5AE3208A10E400742C42 /* Project object */;
+}
