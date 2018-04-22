@@ -17,33 +17,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-    _view1=[[UIViewController alloc]init];
-    _view2=[[UIViewController alloc]init];
-    _view3=[[UIViewController alloc]init];
-    UIButton* button1=[[UIButton alloc]initWithFrame:CGRectMake(30, 50, 60, 40)];
-    [button1 setTitle:@"button1" forState:UIControlStateNormal];
-    UIButton* button2=[[UIButton alloc]initWithFrame:CGRectMake(100, 50, 60, 40)];
-    [button2 setTitle:@"button2" forState:UIControlStateNormal];
-    UIButton* button3=[[UIButton alloc]initWithFrame:CGRectMake(180, 50, 60, 40)];
-    [button3 setTitle:@"button3" forState:UIControlStateNormal];
-    [button1 addTarget:self action:@selector(showview1) forControlEvents:UIControlEventTouchUpInside];
-    [button2 addTarget:self action:@selector(showview2) forControlEvents:UIControlEventTouchUpInside];
-    [button3 addTarget:self action:@selector(showview3) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button1];
-    [self.view addSubview:button2];
-    [self.view addSubview:button3];
+    //界面1，2，3的初始化
+    _view1=[[ChooseInterestViewController alloc]init];
+    [_view1.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    _view2=[[PersonalMessage alloc]init];
+    [_view2.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    _view3=[[RegisterSucceed alloc]init];
+    [_view3.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    //按钮1，2，3
+    _button1=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3-100, 50, 100, 60)];
+    [_button1 setTitle:@"选择兴趣" forState:UIControlStateNormal];
+    [_button1 setBackgroundColor:[UIColor blueColor]];
+    _button1.tag=0;
+    _button2=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 50, 100, 60)];
+    [_button2 setTitle:@"完善信息" forState:UIControlStateNormal];
+    [_button2 setBackgroundColor:[UIColor grayColor]];
+    _button2.tag=1;
+    _button3=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3*2, 50, 100, 60)];
+    [_button3 setTitle:@"完成注册" forState:UIControlStateNormal];
+    [_button3 setBackgroundColor:[UIColor grayColor]];
+    _button3.tag=2;
+    //事件响应
+    [_button1 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
+    [_button2 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
+    [_button3 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
+    //传参
+    _view1.token=_token;
+    _view2.token=_token;//传入从注册界面获得的token
+    _view1.button=_button1;
+    _view2.button=_button2;
+    _view3.button=_button3;
+    [self.view addSubview:_button1];
+    [self.view addSubview:_button2];
+    [self.view addSubview:_button3];
     [self addChildViewController:_view1];
     [self addChildViewController:_view2];
     [self addChildViewController:_view3];
+    [self.view addSubview:_view1.view];
+    _currentView=_view1;
 }
--(void)showview1{
-    [self presentViewController:_view1 animated:YES completion:nil];
-}
--(void)showview2{
-    [self presentViewController:_view2 animated:YES completion:nil];
-}
--(void)showview3{
-    [self presentViewController:_view3 animated:YES completion:nil];
+-(void)showview:(UIButton* )button{
+    //点击了其他按钮
+    if(self.childViewControllers[button.tag]!=_currentView){
+        [_currentView.view removeFromSuperview];
+        if (_currentView==_view1) {
+            _view2.Interest=_view1.interest;//标签云的标签数组传到界面2
+        }
+        [self.view addSubview:self.childViewControllers[button.tag].view];
+        _currentView=self.childViewControllers[button.tag];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

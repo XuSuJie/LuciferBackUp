@@ -14,12 +14,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //_queue=dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
     self.title=@"立即注册";
     [self.navigationController setNavigationBarHidden:NO];
     self.count=TIMECOUNT;
     self.view.backgroundColor = [UIColor whiteColor];
-    
     phoneText=[[Textfield alloc]initWithFrame:CGRectMake(20, Height, SCREEN_SIZE.width, 35)Width:SCREEN_SIZE.width-40];
     [phoneText setPlaceholder:@"输入手机号"];
     [self.view addSubview:phoneText];
@@ -62,6 +60,42 @@
 //    [self.view addSubview:retuBtn];
     
 }
+-(void)registerAFN{
+    if (phoneText.hasText && passwdText.hasText && captchaText.hasText) {
+        //dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+        if(randchar==nil){
+            [self showMessage:@"无效验证码,请重试"];
+            return;
+        }
+        NSString *url=@"https://test.extlife.xyz:8443/user/register";
+        NSDictionary *parameters=@{@"phone":self->phoneText.text,@"password":self->passwdText.text,@"type":@1,
+                                   @"randchar":self->randchar,@"captcha":self->captchaText.text};
+        [[NetWorkManager sharedManager]  GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"responseObject-->%@",responseObject);
+            if([responseObject[@"status"] isEqualToString:@"Success"]){
+                [self showMessage:@"注册成功"];
+                ImputMessage* view=[[ImputMessage alloc]init];
+                view.token=responseObject[@"token"];//填写信息界面接收token
+                [self presentViewController:view animated:YES completion:nil];
+            }
+            if ([responseObject[@"status"] isEqualToString:@"Fail"]) {
+                if([responseObject[@"errormsg"] isEqualToString:@"CaptchaWrong"])
+                    [self showMessage:@"验证码错误"];
+                if([responseObject[@"errormsg"] isEqualToString:@"UserAlready"])
+                    [self showMessage:@"用户已存在"];
+                if([responseObject[@"errormsg"] isEqualToString:@"NoRandChar"])
+                    [self showMessage:@"验证码过期"];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            //dispatch_semaphore_signal(sema);
+            NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
+            [self showMessage:[NSString stringWithFormat:@"注册失败,错误%ld",urlResponse.statusCode ]];
+        }];
+    }
+    else
+        [self showMessage:@"请补全信息"];
+}
 -(void)getCode{
     //异步任务+信号量
     if(self->phoneText.hasText==NO){
@@ -72,7 +106,7 @@
     __block UILabel* label;
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     dispatch_queue_t queue =dispatch_queue_create("getCode", DISPATCH_QUEUE_SERIAL);
-    NSString *url=@"https://extlife.xyz/user/getcode";
+    NSString *url=@"https://test.extlife.xyz:8443/user/getcode";
     NSDictionary *parameters=@{@"auth":@1,@"phone":[self->phoneText text]};
     dispatch_async(queue, ^{
         [[NetWorkManager sharedManager]  GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -93,6 +127,7 @@
             [label setTextAlignment:NSTextAlignmentCenter];
             [label setFont:[UIFont systemFontOfSize:20.0]];
             [self.view addSubview:label];
+            [self.view addSubview:loading];
         });
         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
         //弹窗消失
@@ -141,43 +176,6 @@
 -(void)register2{
     NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(registerAFN) object:nil];
     [operation start];
-}
--(void)registerAFN{
-    if (phoneText.hasText && passwdText.hasText && captchaText.hasText) {
-        //dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-        if(randchar==nil){
-            [self showMessage:@"无效验证码,请重试"];
-            return;
-        }
-        NSString *url=@"https://extlife.xyz/user/register";
-        NSDictionary *parameters=@{@"phone":self->phoneText.text,@"password":self->passwdText.text,@"type":@1,
-                                   @"randchar":self->randchar,@"captcha":self->captchaText.text};
-        [[NetWorkManager sharedManager]  GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            //dispatch_semaphore_signal(sema);
-            NSLog(@"responseObject-->%@",responseObject);
-            if([responseObject[@"status"] isEqualToString:@"Success"]){
-                [self showMessage:@"注册成功"];
-                ImputMessage* view=[[ImputMessage alloc]init];
-                [self presentViewController:view animated:YES completion:nil];
-            }
-            if ([responseObject[@"status"] isEqualToString:@"Fail"]) {
-                if([responseObject[@"errormsg"] isEqualToString:@"CaptchaWrong"])
-                    [self showMessage:@"验证码错误"];
-                if([responseObject[@"errormsg"] isEqualToString:@"UserAlready"])
-                    [self showMessage:@"用户已存在"];
-                if([responseObject[@"errormsg"] isEqualToString:@"NoRandChar"])
-                    [self showMessage:@"验证码过期"];
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            //dispatch_semaphore_signal(sema);
-            NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
-            [self showMessage:[NSString stringWithFormat:@"注册失败,错误%ld",urlResponse.statusCode ]];
-        }];
-        //dispatch_semaphore_wait(sema, DISPATCH_TIME_NOW);
-    }
-    else
-        [self showMessage:@"请补全信息"];
 }
 - (void)showMessage:(NSString *)Msg {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:Msg preferredStyle:UIAlertControllerStyleAlert];

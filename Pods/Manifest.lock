@@ -14,13 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - DBSphereTagCloud (1.0.0)
+  - MOFSPickerManager (2.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
+  - DBSphereTagCloud (~> 1.0.0)
+  - MOFSPickerManager (~> 2.0.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - DBSphereTagCloud
+    - MOFSPickerManager
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  DBSphereTagCloud: 57b9571e93b3565fc22cd65040eabbada06b56f2
+  MOFSPickerManager: d8ab70073d03e9d69d76bc964fed5a9dae2bcafb
 
-PODFILE CHECKSUM: 6f4e5487eb6b06cb88ba0c587118ce39632d1cd6
+PODFILE CHECKSUM: cb124ade7aa1c6243b426a5b0f377fcddd56c44c
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

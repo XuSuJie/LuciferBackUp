@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
+		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
 		568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AEF208A10E500742C42 /* AppDelegate.m */; };
 		568C5AF3208A10E500742C42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AF2208A10E500742C42 /* ViewController.m */; };
 		568C5AF6208A10E500742C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF4208A10E500742C42 /* Main.storyboard */; };
-		568C5AF8208A10EA00742C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF7208A10EA00742C42 /* Assets.xcassets */; };
 		568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */; };
 		568C5AFE208A10EA00742C42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AFD208A10EA00742C42 /* main.m */; };
 		568C5B08208A10EA00742C42 /* ZhangKeBao_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */; };
@@ -23,8 +24,7 @@
 		568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2F208A11D900742C42 /* ApplicaionAppend.m */; };
 		568C5B3C208A11D900742C42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B31208A11D900742C42 /* LoadingView.m */; };
 		568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B32208A11D900742C42 /* NetWorkManager.m */; };
-		568C5B41208A166A00742C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568C5B3F208A166A00742C42 /* Assets.xcassets */; };
-		568C5B42208A166A00742C42 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 568C5B40208A166A00742C42 /* Base.lproj */; };
+		568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */; };
 		97D90387608DFDA598612343 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0CC0F4EFF08BADB62281B1 /* libPods-ZhangKeBao-Student.a */; };
 /* End PBXBuildFile section */
 
@@ -47,13 +47,16 @@
 
 /* Begin PBXFileReference section */
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
+		563C2B56208CC7D400F1A17A /* RegisterSucceed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSucceed.h; sourceTree = "<group>"; };
+		563C2B57208CC7D400F1A17A /* RegisterSucceed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSucceed.m; sourceTree = "<group>"; };
+		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
+		564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMessage.m; sourceTree = "<group>"; };
 		568C5AEB208A10E500742C42 /* ZhangKeBao-Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZhangKeBao-Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568C5AEE208A10E500742C42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		568C5AEF208A10E500742C42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		568C5AF1208A10E500742C42 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		568C5AF2208A10E500742C42 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		568C5AF5208A10E500742C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		568C5AF7208A10EA00742C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568C5AFA208A10EA00742C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		568C5AFC208A10EA00742C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		568C5AFD208A10EA00742C42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,8 +82,8 @@
 		568C5B30208A11D900742C42 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		568C5B31208A11D900742C42 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		568C5B32208A11D900742C42 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
-		568C5B3F208A166A00742C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		568C5B40208A166A00742C42 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		568C5B49208A5EBB00742C42 /* ChooseInterestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseInterestViewController.h; sourceTree = "<group>"; };
+		568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseInterestViewController.m; sourceTree = "<group>"; };
 		76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0CC0F4EFF08BADB62281B1 /* libPods-ZhangKeBao-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhangKeBao-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,30 +139,15 @@
 		568C5AED208A10E500742C42 /* ZhangKeBao-Student */ = {
 			isa = PBXGroup;
 			children = (
-				568C5B3F208A166A00742C42 /* Assets.xcassets */,
-				568C5B40208A166A00742C42 /* Base.lproj */,
-				568C5B26208A11D700742C42 /* AddSpaceView.h */,
-				568C5B2E208A11D900742C42 /* AddSpaceView.m */,
+				568C5B48208A49D200742C42 /* Package */,
+				568C5B47208A499700742C42 /* Login&Register */,
 				568C5B2B208A11D800742C42 /* ApplicaionAppend.h */,
 				568C5B2F208A11D900742C42 /* ApplicaionAppend.m */,
-				568C5B23208A11D600742C42 /* ImputMessage.h */,
-				568C5B2C208A11D800742C42 /* ImputMessage.m */,
-				568C5B20208A11D600742C42 /* LoadingView.h */,
-				568C5B31208A11D900742C42 /* LoadingView.m */,
-				568C5B22208A11D600742C42 /* LoginViewController.h */,
-				568C5B28208A11D800742C42 /* LoginViewController.m */,
-				568C5B24208A11D700742C42 /* NetWorkManager.h */,
-				568C5B32208A11D900742C42 /* NetWorkManager.m */,
-				568C5B30208A11D900742C42 /* RegisterViewController.h */,
-				568C5B2D208A11D800742C42 /* RegisterViewController.m */,
-				568C5B25208A11D700742C42 /* Textfield.h */,
-				568C5B27208A11D800742C42 /* Textfield.m */,
 				568C5AEE208A10E500742C42 /* AppDelegate.h */,
 				568C5AEF208A10E500742C42 /* AppDelegate.m */,
 				568C5AF1208A10E500742C42 /* ViewController.h */,
 				568C5AF2208A10E500742C42 /* ViewController.m */,
 				568C5AF4208A10E500742C42 /* Main.storyboard */,
-				568C5AF7208A10EA00742C42 /* Assets.xcassets */,
 				568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */,
 				568C5AFC208A10EA00742C42 /* Info.plist */,
 				568C5AFD208A10EA00742C42 /* main.m */,
@@ -183,6 +171,40 @@
 				568C5B14208A10EA00742C42 /* Info.plist */,
 			);
 			path = "ZhangKeBao-StudentUITests";
+			sourceTree = "<group>";
+		};
+		568C5B47208A499700742C42 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				568C5B22208A11D600742C42 /* LoginViewController.h */,
+				568C5B28208A11D800742C42 /* LoginViewController.m */,
+				568C5B30208A11D900742C42 /* RegisterViewController.h */,
+				568C5B2D208A11D800742C42 /* RegisterViewController.m */,
+				568C5B23208A11D600742C42 /* ImputMessage.h */,
+				568C5B2C208A11D800742C42 /* ImputMessage.m */,
+				568C5B49208A5EBB00742C42 /* ChooseInterestViewController.h */,
+				568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */,
+				564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */,
+				564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */,
+				563C2B56208CC7D400F1A17A /* RegisterSucceed.h */,
+				563C2B57208CC7D400F1A17A /* RegisterSucceed.m */,
+			);
+			name = "Login&Register";
+			sourceTree = "<group>";
+		};
+		568C5B48208A49D200742C42 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				568C5B26208A11D700742C42 /* AddSpaceView.h */,
+				568C5B2E208A11D900742C42 /* AddSpaceView.m */,
+				568C5B20208A11D600742C42 /* LoadingView.h */,
+				568C5B31208A11D900742C42 /* LoadingView.m */,
+				568C5B24208A11D700742C42 /* NetWorkManager.h */,
+				568C5B32208A11D900742C42 /* NetWorkManager.m */,
+				568C5B25208A11D700742C42 /* Textfield.h */,
+				568C5B27208A11D800742C42 /* Textfield.m */,
+			);
+			name = Package;
 			sourceTree = "<group>";
 		};
 		99BAE0C97F71B39FFBCE3F7C /* Frameworks */ = {
@@ -213,8 +235,7 @@
 				568C5AE7208A10E400742C42 /* Sources */,
 				568C5AE8208A10E500742C42 /* Frameworks */,
 				568C5AE9208A10E500742C42 /* Resources */,
-				CE9724DDD4F28329AAA62D16 /* [CP] Embed Pods Frameworks */,
-				F0C55F4603E3FD995573DEEC /* [CP] Copy Pods Resources */,
+				90A92F2FDEE00F8659A4D48C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,9 +330,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */,
-				568C5AF8208A10EA00742C42 /* Assets.xcassets in Resources */,
-				568C5B42208A166A00742C42 /* Base.lproj in Resources */,
-				568C5B41208A166A00742C42 /* Assets.xcassets in Resources */,
 				568C5AF6208A10E500742C42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +351,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		90A92F2FDEE00F8659A4D48C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh",
+				"${PODS_ROOT}/MOFSPickerManager/MOFSPickerManagerDemo/MOFSPickerManager/province_data.xml",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/province_data.xml",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B011B8CAB766BE433DEADFA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,39 +387,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE9724DDD4F28329AAA62D16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0C55F4603E3FD995573DEEC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh",
-				"${PODS_ROOT}/FRNavigationController/FRNavigationController/FRNavigationController.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FRNavigationController.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -399,9 +402,12 @@
 				568C5B38208A11D900742C42 /* ImputMessage.m in Sources */,
 				568C5B3C208A11D900742C42 /* LoadingView.m in Sources */,
 				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
+				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
+				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
 				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
+				568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,8 +577,9 @@
 			baseConfigurationReference = 76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,6 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -589,8 +597,9 @@
 			baseConfigurationReference = 3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X854ZS3G8;
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,6 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

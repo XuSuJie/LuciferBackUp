@@ -25,6 +25,25 @@
 }
 
 - (void)testExample {
+//    - (NSURLSessionDataTask *)POST:(NSString *)URLString
+//parameters:(id)parameters
+//success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+//failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+//    {
+//        return [self POST:URLString parameters:parameters progress:nil success:success failure:failure];
+//    }
+//    
+//    - (NSURLSessionDataTask *)POST:(NSString *)URLString
+//parameters:(id)parameters
+//progress:(void (^)(NSProgress * _Nonnull))uploadProgress
+//success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
+//failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
+//    {
+//        NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST" URLString:URLString parameters:parameters uploadProgress:uploadProgress downloadProgress:nil success:success failure:failure];
+//        
+//        [dataTask resume];
+//        
+//        return dataTask;
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //    dispatch_semaphore_t sema = dispatch_semaphore_create(0);

@@ -7,6 +7,7 @@
 //
 #import "ApplicaionAppend.h"
 #import "LoginViewController.h"
+#import "ImputMessage.h"
 @implementation LoginViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -108,7 +109,7 @@
     LoadingView* loading=[[LoadingView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:loading];
     [loading show];
-    NSString *url=@"https://extlife.xyz/user/login";
+    NSString *url=@"https://test.extlife.xyz:8443/user/login";
     NSDictionary *parameters=@{@"auth":@1,@"phone":phoneText.text,@"password":passwdText.text};
     [[NetWorkManager sharedManager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -135,6 +136,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //NSLog(@"error-->%@",error);
+        [loading disappear];
         NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
         [self showMessage:[NSString stringWithFormat:@"登录失败,错误%ld",urlResponse.statusCode ]];
     }];

@@ -20,6 +20,8 @@
     LoginViewController* login=[[LoginViewController alloc]init];
     UINavigationController* navi =[[UINavigationController alloc]initWithRootViewController:login];
     self.window.rootViewController=navi;
+//    ImputMessage* view=[ImputMessage new];
+//    self.window.rootViewController=view;
     [self.window makeKeyAndVisible];
     return YES;
 }
