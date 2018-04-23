@@ -19,21 +19,21 @@
     self.view.backgroundColor=[UIColor whiteColor];
     //界面1，2，3的初始化
     _view1=[[ChooseInterestViewController alloc]init];
-    [_view1.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    [_view1.view setFrame:CGRectMake(0, 120, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
     _view2=[[PersonalMessage alloc]init];
-    [_view2.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    [_view2.view setFrame:CGRectMake(0, 120, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
     _view3=[[RegisterSucceed alloc]init];
-    [_view3.view setFrame:CGRectMake(0, 150, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
+    [_view3.view setFrame:CGRectMake(0, 120, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
     //按钮1，2，3
-    _button1=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3-100, 50, 100, 60)];
+    _button1=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3-100, 50, 100, 40)];
     [_button1 setTitle:@"选择兴趣" forState:UIControlStateNormal];
     [_button1 setBackgroundColor:[UIColor blueColor]];
     _button1.tag=0;
-    _button2=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 50, 100, 60)];
+    _button2=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 50, 100, 40)];
     [_button2 setTitle:@"完善信息" forState:UIControlStateNormal];
     [_button2 setBackgroundColor:[UIColor grayColor]];
     _button2.tag=1;
-    _button3=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3*2, 50, 100, 60)];
+    _button3=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3*2, 50, 100, 40)];
     [_button3 setTitle:@"完成注册" forState:UIControlStateNormal];
     [_button3 setBackgroundColor:[UIColor grayColor]];
     _button3.tag=2;

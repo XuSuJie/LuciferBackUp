@@ -19,16 +19,6 @@
     _tags=[[NSMutableArray alloc]initWithCapacity:0];
     _interest=[[NSMutableArray alloc]initWithCapacity:0];
     DBSphereView* cloud=[[DBSphereView alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-160, 100, 320, 320)];
-//    for (NSInteger i = 0; i < 50; i ++) {
-//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-//        [btn setTitle:[NSString stringWithFormat:@"标签%ld", i] forState:UIControlStateNormal];
-//        [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-//        btn.titleLabel.font = [UIFont systemFontOfSize:25.];
-//        btn.frame = CGRectMake(0, 0, 90, 20);
-//       [btn addTarget:self action:@selector(choose:) forControlEvents:UIControlEventTouchUpInside];
-//        [_tags addObject:btn];
-//        [cloud addSubview:btn];
-//    }
     [self  reloadTags:cloud];
     _nextbtn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width-60, 10, 50, 50)];
     [_nextbtn setImage:[UIImage imageNamed:@"Next_22px.png"] forState:UIControlStateNormal];
@@ -40,6 +30,7 @@
     [self.view removeFromSuperview];
     [self.parentViewController.view addSubview:self.parentViewController.childViewControllers[1].view];
 }
+//加载服务器的标签
 -(void)reloadTags:(DBSphereView*)cloud{
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     dispatch_queue_t queue =dispatch_queue_create("getTags", DISPATCH_QUEUE_SERIAL);

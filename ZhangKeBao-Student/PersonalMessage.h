@@ -26,4 +26,9 @@
 @property NSMutableDictionary* dictionary;
 @property NSDictionary* dictionary1;
 @property UIPickerView* picker;
+-(IBAction)imputName:(UITextField*)textfield;
+-(IBAction)imputSchool:(UITextField*)textfield;
+-(IBAction)imputGrade:(UITextField*)textfield;
+-(IBAction)imputClass:(UITextField*)textfield;
+-(IBAction)changeSex:(UISegmentedControl*)btn;
 @end

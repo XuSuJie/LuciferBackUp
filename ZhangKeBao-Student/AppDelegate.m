@@ -17,11 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    LoginViewController* login=[[LoginViewController alloc]init];
-    UINavigationController* navi =[[UINavigationController alloc]initWithRootViewController:login];
-    self.window.rootViewController=navi;
-//    ImputMessage* view=[ImputMessage new];
-//    self.window.rootViewController=view;
+//    LoginViewController* login=[[LoginViewController alloc]init];
+//    UINavigationController* navi =[[UINavigationController alloc]initWithRootViewController:login];
+//    self.window.rootViewController=navi;
+    ImputMessage* view=[ImputMessage new];
+    self.window.rootViewController=view;
     [self.window makeKeyAndVisible];
     return YES;
 }

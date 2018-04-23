@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56367AC7208D6A1500C8C8BB /* PersonalMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */; };
 		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
 		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
 		568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AEF208A10E500742C42 /* AppDelegate.m */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
+		56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalMessage.xib; sourceTree = "<group>"; };
 		563C2B56208CC7D400F1A17A /* RegisterSucceed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSucceed.h; sourceTree = "<group>"; };
 		563C2B57208CC7D400F1A17A /* RegisterSucceed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSucceed.m; sourceTree = "<group>"; };
 		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */,
 				564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */,
 				564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */,
+				56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */,
 				563C2B56208CC7D400F1A17A /* RegisterSucceed.h */,
 				563C2B57208CC7D400F1A17A /* RegisterSucceed.m */,
 			);
@@ -329,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56367AC7208D6A1500C8C8BB /* PersonalMessage.xib in Resources */,
 				568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */,
 				568C5AF6208A10E500742C42 /* Main.storyboard in Resources */,
 			);
