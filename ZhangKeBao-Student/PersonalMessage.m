@@ -17,31 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-//    for(NSInteger i=10;i<10+40*5;i+=40){
-//        UILabel* label=[[UI]]
-//        UITextField* field=[[UITextField alloc]initWithFrame:CGRectMake(75, i,SCREEN_SIZE.width-150, 35)];
-//        field.borderStyle=UITextBorderStyleNone;
-//        [field setTextAlignment:NSTextAlignmentRight];
-//        [self.view addSubview:field];
-//    }
-    //选择省市
-    UIButton* button1=[[UIButton alloc]initWithFrame:CGRectMake(120,150, SCREEN_SIZE.width-120, 21)];
-    [button1 setTitle:@"选择省市" forState:UIControlStateNormal];
-    [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button1.titleLabel.font=[UIFont systemFontOfSize:17.0];
-    [button1 setBackgroundColor:[UIColor whiteColor]];
-    button1.tag=1;
-    [button1 addTarget:self action:@selector(chooseExamPosition:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button1];
-    //选择省市
-    UIButton* button2=[[UIButton alloc]initWithFrame:CGRectMake(120,190, SCREEN_SIZE.width-120, 21)];
-    [button2 setTitle:@"选择省市" forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button2.titleLabel.font=[UIFont systemFontOfSize:17.0];
-    [button2 setBackgroundColor:[UIColor whiteColor]];
-    button2.tag=2;
-    [button2 addTarget:self action:@selector(chooseExamPosition:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button2];
     //确认注册
     UIButton* button=[[UIButton alloc]initWithFrame:CGRectMake(10, 430, SCREEN_SIZE.width-20, 40)];
     [button setTitle:@"注册" forState:UIControlStateNormal];
@@ -63,11 +38,11 @@
     [self.view addSubview:_nextbtn];
 }
 -(void)upload{
-//    if(_Interest.count==0){
-//        [self showMessage:@"未选择标签!"];
-//        return;
-//    }
-    if (_Array2==nil || _Array1==nil ||_Sex==nil || _Name==nil || _Class==nil || _Grade==nil) {
+    if(_Interest.count==0){
+        [self showMessage:@"未选择标签!"];
+        return;
+    }
+    if (_Array2==nil || _Array1==nil || _NameTextfield.text==nil || _SchoolTextfield.text==nil || _GradeTextfield.text==nil||_ClassTextfield.text==nil) {
         [self showMessage:@"信息不完整!"];
         return;
     }
@@ -75,18 +50,17 @@
     _token=@"648a98fd874843f49aa7e34061dfb20b";
     [manager.requestSerializer setValue:_token forHTTPHeaderField:@"token"];
     NSString *url=@"https://test.extlife.xyz:8443/userinfo/setusertags";
-    _dictionary=[[NSMutableDictionary alloc]initWithCapacity:0];
+    _tags=[[NSMutableDictionary alloc]initWithCapacity:0];
     for (NSInteger i=0;i<_Interest.count; i++) {
         NSString* key=[NSString stringWithFormat:@"%ld",i];
-        [_dictionary setObject:[_Interest objectAtIndex:i] forKey:key];
+        [_tags setObject:[_Interest objectAtIndex:i] forKey:key];
     }
-    _dictionary1=@{@"Name" : _Name,@"Sex" : _Sex,@"province1" : _Array1[0],
-                   @"city1" : _Array1[1],@"area1" : _Array1[2],@"province2" : _Array2[0],
-                   @"city2" : _Array2[1],@"area2" : _Array2[2],@"School" : _School,
-                   @"Grade" : _Grade,@"Class" : _Class
+    _message=@{@"Name" : _NameTextfield.text,@"Sex":[_SexSegment titleForSegmentAtIndex:[_SexSegment selectedSegmentIndex]],@"province1" : _Array1[0],@"city1" : _Array1[1],@"area1" : _Array1[2],
+               @"province2" : _Array2[0],@"city2" : _Array2[1],@"area2" : _Array2[2],@"School" : _SchoolTextfield.text,
+                   @"Grade" : _GradeTextfield.text,@"Class" : _ClassTextfield.text
                   };
-    NSLog(@"%@",_dictionary1);
-    [manager POST:url parameters:_dictionary progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSLog(@"%@",_message);
+    [manager POST:url parameters:_tags progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
         NSLog(@"success");
         NSLog(@"%@",responseObject);
@@ -109,42 +83,23 @@
     [self.parentViewController.view addSubview:self.parentViewController.childViewControllers[2].view];
 }
 //选择省市区
--(void)chooseExamPosition:(UIButton*)button{
+-(IBAction)chooseExamPosition:(UIButton*)button{
     [[MOFSPickerManager shareManger] showMOFSAddressPickerWithTitle:nil cancelTitle:@"取消" commitTitle:@"完成" commitBlock:^(NSString *address, NSString *zipcode) {
         NSLog(@"%@",address);
-        [button setTitle:address forState:UIControlStateNormal];
+        NSString* str=nil;
         if (button.tag==1) {
             self->_Array1 =[address componentsSeparatedByString:@"-"];
+            str=[NSString stringWithFormat:@"%@ %@ %@",self->_Array1[0],self->_Array1[1],self->_Array1[2]];
+            self->_ExamArea.text=str;
         }
         if (button.tag==2) {
             self->_Array2=[address componentsSeparatedByString:@"-"];
+            str=[NSString stringWithFormat:@"%@ %@ %@",self->_Array2[0],self->_Array2[1],self->_Array2[2]];
+            self->_SchoArea.text=str;
         }
-        NSLog(@"%@",self->_Array1);
+        
     } cancelBlock:^{
     }];
-}
--(IBAction)imputName:(UITextField*)textfield{
-    _Name=textfield.text;
-}
--(IBAction)imputSchool:(UITextField*)textfield{
-    _School=textfield.text;
-}
--(IBAction)imputGrade:(UITextField*)textfield{
-    _Grade=textfield.text;
-}
--(IBAction)imputClass:(UITextField*)textfield{
-    _Class=textfield.text;
-}
--(IBAction)changeSex:(UISegmentedControl*)btn{
-    switch ([btn selectedSegmentIndex]) {
-        case 0:
-            _Sex=@"男";
-            break;
-        case 1:
-            _Sex=@"女";
-            break;
-    }
-    NSLog(@"%@",_Sex);
 }
 //控制器即将显示时
 - (void)viewWillAppear:(BOOL)animated{

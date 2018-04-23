@@ -11,6 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalMessage">
             <connections>
+                <outlet property="ClassTextfield" destination="Zlt-U8-xTu" id="zLq-mB-WPO"/>
+                <outlet property="ExamArea" destination="IxD-Uy-AKU" id="dlG-XR-GEr"/>
+                <outlet property="GradeTextfield" destination="3sX-ap-Hae" id="tQE-WG-oFh"/>
+                <outlet property="NameTextfield" destination="xyP-5A-iik" id="PyH-4v-Iqy"/>
+                <outlet property="SchoArea" destination="oKQ-F6-mxF" id="QLM-eu-UCk"/>
+                <outlet property="SchoolTextfield" destination="IB7-UW-Yrh" id="O5f-Z1-zhO"/>
+                <outlet property="SexSegment" destination="NmW-tl-VGy" id="ha2-fr-iWc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4pG-HC-hzM"/>
             </connections>
         </placeholder>
@@ -33,9 +40,6 @@
                         <segment title="男"/>
                         <segment title="女"/>
                     </segments>
-                    <connections>
-                        <action selector="changeSex:" destination="-1" eventType="valueChanged" id="BrT-zZ-JPZ"/>
-                    </connections>
                 </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RaJ-YF-wWU">
                     <rect key="frame" x="51" y="108" width="35" height="21"/>
@@ -59,48 +63,39 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="学校" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J9Q-zk-kVm">
-                    <rect key="frame" x="51" y="228" width="35" height="21"/>
+                    <rect key="frame" x="51" y="227" width="35" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="年级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PWR-Fj-a6e">
-                    <rect key="frame" x="51" y="268" width="35" height="21"/>
+                    <rect key="frame" x="51" y="267" width="35" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="xyP-5A-iik">
-                    <rect key="frame" x="146" y="63" width="147" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="xyP-5A-iik">
+                    <rect key="frame" x="167" y="63" width="147" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="imputName:" destination="-1" eventType="editingDidEnd" id="aCU-ZI-P6W"/>
-                    </connections>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="IB7-UW-Yrh">
-                    <rect key="frame" x="146" y="223" width="147" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="IB7-UW-Yrh">
+                    <rect key="frame" x="167" y="223" width="147" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="imputSchool:" destination="-1" eventType="editingChanged" id="S7G-Dr-LTI"/>
-                    </connections>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="3sX-ap-Hae">
-                    <rect key="frame" x="146" y="263" width="147" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="3sX-ap-Hae">
+                    <rect key="frame" x="167" y="262" width="147" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="imputGrade:" destination="-1" eventType="editingDidEnd" id="hkx-nh-fuL"/>
-                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="*由于高考改革，为保证推荐结果正确，请正确填写信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0uX-t4-ngr">
                     <rect key="frame" x="13" y="367" width="349" height="17"/>
@@ -110,12 +105,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="班级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SrK-tA-dT4">
-                    <rect key="frame" x="51" y="308" width="35" height="21"/>
+                    <rect key="frame" x="51" y="307" width="35" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="Zlt-U8-xTu">
+                    <rect key="frame" x="167" y="303" width="147" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="注册即代表你已同意掌课宝用户协议" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2q-gG-MXG">
                     <rect key="frame" x="73" y="405" width="229" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -130,19 +132,48 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="Zlt-U8-xTu">
-                    <rect key="frame" x="146" y="303" width="147" height="30"/>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ibe-72-iB6">
+                    <rect key="frame" x="143" y="142" width="12" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="&gt;">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
-                        <action selector="imputClass:" destination="-1" eventType="editingDidEnd" id="6vo-wz-V0q"/>
+                        <action selector="chooseExamPosition:" destination="-1" eventType="touchUpInside" id="oLs-wF-FFx"/>
                     </connections>
-                </textField>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2e0-9R-2z6">
+                    <rect key="frame" x="143" y="182" width="12" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="&gt;">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="chooseExamPosition:" destination="-1" eventType="touchUpInside" id="QKq-vT-l8D"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" id="IxD-Uy-AKU">
+                    <rect key="frame" x="178" y="142" width="172" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" id="oKQ-F6-mxF">
+                    <rect key="frame" x="178" y="182" width="172" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-7.5" y="62.5"/>
+            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <point key="canvasLocation" x="98.5" y="-40.5"/>
         </view>
     </objects>
 </document>

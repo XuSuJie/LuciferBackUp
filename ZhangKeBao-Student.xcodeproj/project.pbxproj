@@ -141,8 +141,6 @@
 		568C5AED208A10E500742C42 /* ZhangKeBao-Student */ = {
 			isa = PBXGroup;
 			children = (
-				568C5B48208A49D200742C42 /* Package */,
-				568C5B47208A499700742C42 /* Login&Register */,
 				568C5B2B208A11D800742C42 /* ApplicaionAppend.h */,
 				568C5B2F208A11D900742C42 /* ApplicaionAppend.m */,
 				568C5AEE208A10E500742C42 /* AppDelegate.h */,
@@ -153,6 +151,8 @@
 				568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */,
 				568C5AFC208A10EA00742C42 /* Info.plist */,
 				568C5AFD208A10EA00742C42 /* main.m */,
+				568C5B48208A49D200742C42 /* Package */,
+				568C5B47208A499700742C42 /* Login&Register */,
 			);
 			path = "ZhangKeBao-Student";
 			sourceTree = "<group>";

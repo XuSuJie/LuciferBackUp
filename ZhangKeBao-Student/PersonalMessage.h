@@ -16,19 +16,17 @@
 @property UIButton* nextbtn;
 @property NSString* token;
 @property NSMutableArray* Interest;//标签数组
-@property NSString* Name;
-@property NSString* Sex;
 @property NSArray* Array1;//高考所在地
 @property NSArray* Array2;//学校所在地
-@property NSString* School;
-@property NSString* Grade;
-@property NSString* Class;
-@property NSMutableDictionary* dictionary;
-@property NSDictionary* dictionary1;
+@property NSMutableDictionary* tags;//标签字典
+@property NSDictionary* message;
 @property UIPickerView* picker;
--(IBAction)imputName:(UITextField*)textfield;
--(IBAction)imputSchool:(UITextField*)textfield;
--(IBAction)imputGrade:(UITextField*)textfield;
--(IBAction)imputClass:(UITextField*)textfield;
--(IBAction)changeSex:(UISegmentedControl*)btn;
+@property (weak, nonatomic) IBOutlet UITextView *ExamArea;
+@property (weak, nonatomic) IBOutlet UITextView *SchoArea;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *SexSegment;
+@property (weak, nonatomic) IBOutlet UITextField *NameTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *SchoolTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *ClassTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *GradeTextfield;
+-(IBAction)chooseExamPosition:(UIButton*)button;
 @end
