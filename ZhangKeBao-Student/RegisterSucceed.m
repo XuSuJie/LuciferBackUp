@@ -13,17 +13,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-    UILabel* label1=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-75, (SCREEN_SIZE.height)/2-15, 150, 30)];
-    label1.textAlignment=NSTextAlignmentCenter;
-    [label1 setText:@"完成注册"];
-    [label1 setTextColor:[UIColor blackColor]];
-    [self.view addSubview:label1];
+    //标题
+    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-45, 25, 90, 24)];
+    [label setFont:[UIFont systemFontOfSize:20.0]];
+    [label setText:@"完成注册"];
+    [label setTextColor:[UIColor blackColor]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:label];
     //上一页
     _prebtn=[[UIButton alloc]initWithFrame:CGRectMake( 10, 10, 50, 50)];
     [_prebtn setImage:[UIImage imageNamed:@"Next_22px.png"] forState:UIControlStateNormal];
     [_prebtn setBackgroundColor:[UIColor blueColor]];
     [_prebtn addTarget:self action:@selector(prepage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_prebtn];
+    //画圆弧
+   // [self.view addSubview:[UIBezierPath bezierPathWithArcCenter:CGPointMake(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2) radius:50.0 startAngle:0.0 endAngle:M_PI_4*3 clockwise:YES]];
 }
 -(void)prepage{
     [self.view removeFromSuperview];

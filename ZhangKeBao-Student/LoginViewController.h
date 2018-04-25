@@ -11,8 +11,11 @@
 #import "RegisterViewController.h"
 #import "NetWorkManager.h"
 #import "LoadingView.h"
-@interface LoginViewController : UIViewController{
+#import "TencentOpenAPI.framework/Headers/TencentOAuth.h"
+@interface LoginViewController : UIViewController<TencentSessionDelegate>{
     Textfield *phoneText;
     Textfield *passwdText;
 }
+@property TencentOAuth* tencentOAuth;
+@property NSArray* permissions;
 @end

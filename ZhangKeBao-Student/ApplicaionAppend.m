@@ -7,7 +7,7 @@
 //
 
 #import "ApplicaionAppend.h"
-
+#import "SwipeViewController.h"
 @interface ApplicaionAppend ()
 
 @end
@@ -16,17 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITabBarController* tabbar= [[UITabBarController alloc]init];
-    
-    UIViewController* v1=[[UIViewController alloc]init];
-    UINavigationController* nav1 =[[UINavigationController alloc]initWithRootViewController:v1];
-    nav1.view.backgroundColor=[UIColor whiteColor];
-    UILabel* label1=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-75, (SCREEN_SIZE.height-TABBAR_HEIGHT)/2-15, 150, 30)];
-    label1.textAlignment=NSTextAlignmentCenter;
-    [label1 setText:@"这是首页界面"];
-    [nav1.view addSubview:label1];
+    SwipeViewController* v1=[[SwipeViewController alloc]init];
+    //HomePageViewController* v1=[[HomePageViewController alloc]init];
+    UINavigationController* nav1=[[UINavigationController alloc]initWithRootViewController:v1];
     nav1.title=@"首页";
-    nav1.tabBarItem.image=[UIImage imageNamed:@"tab_recent_nor"];
+    nav1.tabBarItem.image=[UIImage imageNamed:@"Next_22px"];
     //v1.tabBarItem.badgeValue=@"123";
     UIViewController* v2=[[UIViewController alloc]init];
     UINavigationController* nav2 =[[UINavigationController alloc]initWithRootViewController:v2];
@@ -64,9 +58,10 @@
     nav5.title=@"个人中心";
     nav5.tabBarItem.image=[UIImage imageNamed:@"tag"];
     nav5.view.backgroundColor=[UIColor whiteColor];
-    tabbar.viewControllers=@[nav1,nav2,nav3,nav4,nav5];
+    self.viewControllers=@[nav1,nav2,nav3,nav4,nav5];
+    self.tabBar.backgroundColor=[UIColor darkGrayColor];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    window.rootViewController=tabbar;
+    window.rootViewController=self;
     [window makeKeyAndVisible];
 }
 

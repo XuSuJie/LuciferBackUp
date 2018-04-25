@@ -85,20 +85,32 @@
 }
 //QQ注册和登录
 -(void)qqLogin{
-    UIViewController *qqView = [[UIViewController alloc]init];
-    [qqView.view setBackgroundColor:[UIColor whiteColor]];
-    qqView.title=@"QQ登录";
-    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, 200, 200, 30)];
-    [label setText:@"掌课宝"];
-    UIButton* button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2 - 125, 345, 250, 40)];
-    [button setTitle:@"登录" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor blueColor]];
-    [qqView.view addSubview:button];
-    [qqView.view addSubview:label];
-    self.hidesBottomBarWhenPushed=YES;
-    [self.navigationController pushViewController:qqView animated:YES];
-    self.hidesBottomBarWhenPushed=NO;
+    _tencentOAuth =[[TencentOAuth alloc]initWithAppId:@"1106862042" andDelegate:self];
+    _permissions =  [NSArray arrayWithObjects:@"get_user_info",@"get_simple_userinfo",@"add_t",nil];
+    //登录操作
+    [_tencentOAuth authorize:_permissions];
+    //保存授权信息
+    //[_tencentOAuth accessToken] ;授权信息参数1
+    //[_tencentOAuth openId] ;参数2
+    //[_tencentOAuth expirationDate];参数3
+    //[_tencentOAuth getCachedOpenID];
+    //[_tencentOAuth getCachedToken];
+    //获取用户信息，头像，昵称[_tencentOAuth getUserInfo];
+
+//    UIViewController *qqView = [[UIViewController alloc]init];
+//    [qqView.view setBackgroundColor:[UIColor whiteColor]];
+//    qqView.title=@"QQ登录";
+//    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, 200, 200, 30)];
+//    [label setText:@"掌课宝"];
+//    UIButton* button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2 - 125, 345, 250, 40)];
+//    [button setTitle:@"登录" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [button setBackgroundColor:[UIColor blueColor]];
+//    [qqView.view addSubview:button];
+//    [qqView.view addSubview:label];
+//    self.hidesBottomBarWhenPushed=YES;
+//    [self.navigationController pushViewController:qqView animated:YES];
+//    self.hidesBottomBarWhenPushed=NO;
 }
 //登录功能
 -(void)login{
@@ -154,7 +166,41 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [TencentOAuth HandleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [TencentOAuth HandleOpenURL:url];
+}
+- (void)tencentDidLogin {
+    [self showMessage:@"QQ登录成功"];
+    if (_tencentOAuth.accessToken && 0 != [_tencentOAuth.accessToken length]){
+        //  记录登录用户的OpenID、Token以及过期时间
+        NSLog(@"%@",_tencentOAuth.accessToken) ;
+    }
+    else{
+        NSLog(@"登录失败 没有获取accesstoken");
+    }
+}
+- (void)tencentDidNotLogin:(BOOL)cancelled {
+    if (cancelled) {
+        NSLog(@"用户注销");
+    } else {
+        [self showMessage:@"QQ登录失败"];
+    }
+}
+- (void)tencentDidNotNetWork {
+    [self showMessage:@"网络无连接"];
+}
+- (void)getUserInfoResponse:(APIResponse *)response {
+    if (response && response.retCode == URLREQUEST_SUCCEED) {
+        NSDictionary *userInfo = [response jsonResponse];
+        NSString *nickName = userInfo[@"nickname"];
+        NSLog(@"NickName is %@",nickName);
+    } else {
+        NSLog(@"QQ auth fail ,getUserInfoResponse:%d", response.detailRetCode);
+    }
+}
 /*
 #pragma mark - Navigation
 

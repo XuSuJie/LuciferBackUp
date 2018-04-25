@@ -18,6 +18,15 @@
     self.view.backgroundColor=[UIColor whiteColor];
     _tags=[[NSMutableArray alloc]initWithCapacity:0];
     _interest=[[NSMutableArray alloc]initWithCapacity:0];
+    //标题
+    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-105, 25, 210, 24)];
+    [label setFont:[UIFont systemFontOfSize:20.0]];
+    [label setText:@"挑选出你感兴趣的标签"];
+    [label setTextColor:[UIColor blackColor]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:label];
+    //标签云
     DBSphereView* cloud=[[DBSphereView alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-160, 100, 320, 320)];
     [self  reloadTags:cloud];
     _nextbtn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width-60, 10, 50, 50)];
@@ -49,6 +58,7 @@
             NSLog(@"get null");
         }];
         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        //获取全部标签后加载
         for (NSInteger i = 0; i < self->_dictionary.count; i ++) {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
             NSString* key=[NSString stringWithFormat:@"%ld",i];

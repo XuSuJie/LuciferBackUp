@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
+    _imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+    _imageView.image = [UIImage imageNamed:@"bg_icon_intro"];
     //确认注册
     UIButton* button=[[UIButton alloc]initWithFrame:CGRectMake(10, 430, SCREEN_SIZE.width-20, 40)];
     [button setTitle:@"注册" forState:UIControlStateNormal];

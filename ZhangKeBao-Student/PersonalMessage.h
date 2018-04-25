@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MOFSPickerManager.h>
 #import "NetWorkManager.h"
+#import "drawGraphics.h"
 @interface PersonalMessage : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @property UIButton* button;//完善信息按钮
@@ -21,6 +22,7 @@
 @property NSMutableDictionary* tags;//标签字典
 @property NSDictionary* message;
 @property UIPickerView* picker;
+@property UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *ExamArea;
 @property (weak, nonatomic) IBOutlet UITextView *SchoArea;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *SexSegment;
