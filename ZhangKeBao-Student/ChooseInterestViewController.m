@@ -44,9 +44,8 @@
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     dispatch_queue_t queue =dispatch_queue_create("getTags", DISPATCH_QUEUE_SERIAL);
     NetWorkManager* manager=[NetWorkManager sharedManager];
-    _token=@"9b206ae469ee4d08b8a7464839f6df63";
     [manager.requestSerializer setValue:_token forHTTPHeaderField:@"token"];
-    NSString *url=@"https://test.extlife.xyz:8443/userinfo/getusertags";
+    NSString *url=@"https://test.extlife.xyz:8443/userinfo/getglobaltags";
     dispatch_async(queue, ^{
         [manager  POST:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

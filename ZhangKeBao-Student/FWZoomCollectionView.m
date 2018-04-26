@@ -9,7 +9,7 @@
 #import "FWZoomCollectionView.h"
 #import "FWZoomCollectionViewFlowLayout.h"
 /* 缩放倍数 */
-#define ZC 1.50
+#define ZC 0.80
 
 @interface FWZoomCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource,FWZoomCollectionViewFlowLayoutDelegate>
 

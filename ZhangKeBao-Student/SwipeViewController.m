@@ -27,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor grayColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    self.title=@"首页";
+    //self.edgesForExtendedLayout=0; 导航栏透明化
     dataArray = [NSMutableArray arrayWithCapacity:19];
 
     [self.view addSubview:self.collectionView];

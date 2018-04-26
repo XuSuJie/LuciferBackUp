@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@",_vc);
     SwipeViewController* v1=[[SwipeViewController alloc]init];
     //HomePageViewController* v1=[[HomePageViewController alloc]init];
     UINavigationController* nav1=[[UINavigationController alloc]initWithRootViewController:v1];
@@ -60,9 +61,7 @@
     nav5.view.backgroundColor=[UIColor whiteColor];
     self.viewControllers=@[nav1,nav2,nav3,nav4,nav5];
     self.tabBar.backgroundColor=[UIColor darkGrayColor];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    window.rootViewController=self;
-    [window makeKeyAndVisible];
+    
 }
 
 - (void)didReceiveMemoryWarning {

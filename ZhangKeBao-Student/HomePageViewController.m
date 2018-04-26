@@ -18,6 +18,7 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.tabBarItem.image=[UIImage imageNamed:@"tab_recent_nor"];
     self.navigationItem.title=@"首页";
+    
     UIBarButtonItem* right=[[UIBarButtonItem alloc]initWithTitle:@"签到" style:UIBarButtonItemStylePlain target:self action:@selector(push:)];
     self.navigationItem.rightBarButtonItem=right;
     UISwipeGestureRecognizer* swipe =[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeAction)];

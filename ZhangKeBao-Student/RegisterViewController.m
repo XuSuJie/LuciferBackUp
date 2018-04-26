@@ -119,22 +119,22 @@
             NSLog(@"get null");
             dispatch_semaphore_signal(sema);
         }];
-        //出现弹窗
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [loading show];
-            label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, (SCREEN_SIZE.height-49)/2+100, 200, 30)];
-            [label setText:@"正在获取验证码"];
-            [label setTextAlignment:NSTextAlignmentCenter];
-            [label setFont:[UIFont systemFontOfSize:20.0]];
-            [self.view addSubview:label];
-            [self.view addSubview:loading];
-        });
-        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-        //弹窗消失
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [label removeFromSuperview];
-            [loading disappear];
-        });
+    //出现弹窗
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [loading show];
+        label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, (SCREEN_SIZE.height-49)/2+100, 200, 30)];
+        [label setText:@"正在获取验证码"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setFont:[UIFont systemFontOfSize:20.0]];
+        [self.view addSubview:label];
+        [self.view addSubview:loading];
+    });
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    //弹窗消失
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [label removeFromSuperview];
+        [loading disappear];
+    });
         //[alertView dismissAnimated:YES completionHandler:nil];
         //alertView=nil;
         //[alert dismissViewControllerAnimated:YES completion:nil];

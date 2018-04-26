@@ -40,41 +40,80 @@
     [self.view addSubview:_nextbtn];
 }
 -(void)upload{
-    if(_Interest.count==0){
-        [self showMessage:@"未选择标签!"];
-        return;
-    }
-    if (_Array2==nil || _Array1==nil || _NameTextfield.text==nil || _SchoolTextfield.text==nil || _GradeTextfield.text==nil||_ClassTextfield.text==nil) {
+//    if(_Interest.count==0){
+//        [self showMessage:@"未选择标签!"];
+//        return;
+//    }
+    if (_ExamArea.text==nil || _NameTextfield.text==nil  || _GradeTextfield.text==nil) {
         [self showMessage:@"信息不完整!"];
         return;
     }
     NetWorkManager* manager=[NetWorkManager sharedManager];
-    _token=@"648a98fd874843f49aa7e34061dfb20b";
     [manager.requestSerializer setValue:_token forHTTPHeaderField:@"token"];
-    NSString *url=@"https://test.extlife.xyz:8443/userinfo/setusertags";
-    _tags=[[NSMutableDictionary alloc]initWithCapacity:0];
-    for (NSInteger i=0;i<_Interest.count; i++) {
-        NSString* key=[NSString stringWithFormat:@"%ld",i];
-        [_tags setObject:[_Interest objectAtIndex:i] forKey:key];
-    }
-    _message=@{@"Name" : _NameTextfield.text,@"Sex":[_SexSegment titleForSegmentAtIndex:[_SexSegment selectedSegmentIndex]],@"province1" : _Array1[0],@"city1" : _Array1[1],@"area1" : _Array1[2],
-               @"province2" : _Array2[0],@"city2" : _Array2[1],@"area2" : _Array2[2],@"School" : _SchoolTextfield.text,
-                   @"Grade" : _GradeTextfield.text,@"Class" : _ClassTextfield.text
-                  };
-    NSLog(@"%@",_message);
-    [manager POST:url parameters:_tags progress:^(NSProgress * _Nonnull uploadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        NSLog(@"success");
-        NSLog(@"%@",responseObject);
-        if ([responseObject[@"errormsg"] isEqualToString:@"None"]) {
-            //跳转到第三页
-            [self.view removeFromSuperview];
-            [self.parentViewController.view addSubview:self.parentViewController.childViewControllers[2].view];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"failure");
-        //NSLog(@"%@",error);
-    }];
+    //    _tags=[[NSMutableDictionary alloc]initWithCapacity:0];
+    //    for (NSInteger i=0;i<_Interest.count; i++) {
+    //        NSString* key=[NSString stringWithFormat:@"%ld",i];
+    //        [_tags setObject:[_Interest objectAtIndex:i] forKey:key];
+    //    }
+    self->_message=@{@"name" : self->_NameTextfield.text,@"sex":[self->_SexSegment titleForSegmentAtIndex:[self->_SexSegment selectedSegmentIndex]],@"area2" : self->_ExamArea.text,@"grade" : self->_GradeTextfield.text/*,@"area1" : _SchoArea.text,@"school" : _SchoolTextfield.text,@"class" : _ClassTextfield.text*/};
+    NSLog(@"%@",self->_message);
+    //dispatch_semaphore_t sema = dispatch_semaphore_create(2);
+    dispatch_group_t group=dispatch_group_create();
+    dispatch_queue_t queue =dispatch_queue_create("upload", DISPATCH_QUEUE_CONCURRENT);//异步队列
+    dispatch_group_async(group, queue, ^{
+        dispatch_group_enter(group);
+        //上传已选择标签(字符串字典)
+        NSString *url=@"https://test.extlife.xyz:8443/userinfo/setusertags";
+        [manager POST:url parameters:self->_tags progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+            NSLog(@"success");
+            NSLog(@"%@",responseObject);
+            dispatch_group_leave(group);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"failure");
+            return;
+        }];
+        NSLog(@"上传标签,%@",[NSThread currentThread]);
+    });
+    dispatch_group_async(group,queue,^{
+        //上传个人信息
+        dispatch_group_enter(group);
+            NSLog(@"上传信息,%@",[NSThread currentThread]);
+            NSString* url=@"https://test.extlife.xyz:8443/userinfo/setuserinfo";
+            [manager POST:url parameters:self->_message progress:^(NSProgress * _Nonnull uploadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+                //dispatch_semaphore_signal(sema);
+                NSLog(@"success");
+                NSLog(@"%@",responseObject);
+                dispatch_group_leave(group);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                //dispatch_semaphore_signal(sema);
+                NSLog(@"failure");
+                dispatch_group_leave(group);
+            }];
+    });
+//    dispatch_async(queue, ^{
+//        //上传个人信息
+//        NSString* url=@"https://test.extlife.xyz:8443/userinfo/setuserinfo";
+//        [manager POST:url parameters:self->_message progress:^(NSProgress * _Nonnull uploadProgress) {
+//            NSLog(@"上传信息,%@",[NSThread currentThread]);
+//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+//            dispatch_semaphore_signal(sema);
+//            NSLog(@"success");
+//            NSLog(@"%@",responseObject);
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            dispatch_semaphore_signal(sema);
+//            NSLog(@"failure");
+//        }];
+//    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"跳转,%@",[NSThread currentThread]);
+        //跳转到第三页
+        //[self.view removeFromSuperview];
+        //[self.parentViewController.view addSubview:self.parentViewController.childViewControllers[2].view];
+    });
+    
 }
 -(void)prepage{
     [self.view removeFromSuperview];
@@ -87,7 +126,7 @@
 //选择省市区
 -(IBAction)chooseExamPosition:(UIButton*)button{
     [[MOFSPickerManager shareManger] showMOFSAddressPickerWithTitle:nil cancelTitle:@"取消" commitTitle:@"完成" commitBlock:^(NSString *address, NSString *zipcode) {
-        NSLog(@"%@",address);
+        //NSLog(@"%@",address);
         NSString* str=nil;
         if (button.tag==1) {
             self->_Array1 =[address componentsSeparatedByString:@"-"];

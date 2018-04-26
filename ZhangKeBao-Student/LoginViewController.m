@@ -125,35 +125,40 @@
     NSDictionary *parameters=@{@"auth":@1,@"phone":phoneText.text,@"password":passwdText.text};
     [[NetWorkManager sharedManager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [loading disappear];
-        NSLog(@"responseObject-->%@",responseObject);
-        //NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
-        if([responseObject[@"status"] isEqualToString:@"Fail"]){
-            if ([responseObject[@"errormsg"] isEqualToString:@"PasswordIncorrect"])
-                [self showMessage:@"密码错误"];
-            if ([responseObject[@"errormsg"] isEqualToString:@"NoUser"])
-                [self showMessage:@"账户不存在"];
-            //if ([responseObject[@"errormsg"] isEqualToString:@"CaptchaRequire"]) 需要验证码
-        }
-        else{
-            [loading disappear];
-            NSLog(@"%@",responseObject[@"token"]);
-            if ([responseObject[@"errormsg"] isEqualToString:@"None"]) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
-                [self presentViewController:alert animated:true completion:nil];
-                sleep(2);
-                ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
-                [self presentViewController:app animated:YES completion:nil];
-            }
-        }
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [loading disappear];
+                [NSThread sleepForTimeInterval:2.0];
+            });
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                NSLog(@"responseObject-->%@",responseObject);
+                if([responseObject[@"status"] isEqualToString:@"Fail"]){
+                    if ([responseObject[@"errormsg"] isEqualToString:@"PasswordIncorrect"])
+                        [self showMessage:@"密码错误"];
+                    if ([responseObject[@"errormsg"] isEqualToString:@"NoUser"])
+                        [self showMessage:@"账户不存在"];
+                    //if ([responseObject[@"errormsg"] isEqualToString:@"CaptchaRequire"]) 需要验证码
+                }
+                else{
+                    NSLog(@"%@",responseObject[@"token"]);
+                    ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
+                    app.vc=self;
+                    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+                    window.rootViewController=app;
+                }
+            });
+        });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //NSLog(@"error-->%@",error);
-        [loading disappear];
-        NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
-        [self showMessage:[NSString stringWithFormat:@"登录失败,错误%ld",urlResponse.statusCode ]];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [loading disappear];
+            });
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [self showMessage:@"网络无连接"];
+            });
+        });
     }];
 }
-
 - (void)showMessage:(NSString *)Msg {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:Msg preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
