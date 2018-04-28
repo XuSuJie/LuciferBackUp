@@ -142,7 +142,6 @@
                 else{
                     NSLog(@"%@",responseObject[@"token"]);
                     ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
-                    app.vc=self;
                     UIWindow *window = [UIApplication sharedApplication].keyWindow;
                     window.rootViewController=app;
                 }

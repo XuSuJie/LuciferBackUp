@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */; };
 		56367AC7208D6A1500C8C8BB /* PersonalMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */; };
+		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
+		56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */; };
+		56386F112093014E00239378 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* TestViewController.m */; };
 		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
 		563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D91A6208EDF4800C91C45 /* drawGraphics.m */; };
 		563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -21,14 +25,9 @@
 		563D91C1208F177800C91C45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C0208F177800C91C45 /* Foundation.framework */; };
 		563D91C5208F17ED00C91C45 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C4208F17ED00C91C45 /* libstdc++.tbd */; };
 		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
-		5661909A208F531B007CA9D6 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56619098208F531B007CA9D6 /* HomePageViewController.m */; };
 		566190A2208F90B1007CA9D6 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A1208F90B1007CA9D6 /* MyCollectionViewCell.m */; };
 		566190A5208F915C007CA9D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A4208F915C007CA9D6 /* ViewController.m */; };
-		566190B8208FA42C007CA9D6 /* FWZoomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A6208FA42A007CA9D6 /* FWZoomCollectionViewFlowLayout.m */; };
-		566190BA208FA42C007CA9D6 /* FWZoomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A9208FA42A007CA9D6 /* FWZoomCollectionView.m */; };
-		566190BB208FA42C007CA9D6 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190AA208FA42B007CA9D6 /* DataModel.m */; };
 		566190BD208FA42C007CA9D6 /* Next_22px.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190AC208FA42B007CA9D6 /* Next_22px.png */; };
-		566190C0208FA42C007CA9D6 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190B1208FA42B007CA9D6 /* SwipeViewController.m */; };
 		566190C4208FA42C007CA9D6 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190B5208FA42C007CA9D6 /* 8.png */; };
 		568939692091B9FD004E384A /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 568939612091B9FC004E384A /* 2.png */; };
 		5689396A2091B9FD004E384A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 568939622091B9FC004E384A /* 1.png */; };
@@ -74,6 +73,12 @@
 /* Begin PBXFileReference section */
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
 		56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalMessage.xib; sourceTree = "<group>"; };
+		56386F092093014C00239378 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		56386F0B2093014D00239378 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		56386F0C2093014D00239378 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		56386F0E2093014E00239378 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
 		563C2B56208CC7D400F1A17A /* RegisterSucceed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSucceed.h; sourceTree = "<group>"; };
 		563C2B57208CC7D400F1A17A /* RegisterSucceed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSucceed.m; sourceTree = "<group>"; };
 		563D91A5208EDF4800C91C45 /* drawGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawGraphics.h; sourceTree = "<group>"; };
@@ -90,22 +95,12 @@
 		563D91C4208F17ED00C91C45 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
 		564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMessage.m; sourceTree = "<group>"; };
-		56619097208F531B007CA9D6 /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		56619098208F531B007CA9D6 /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		566190A0208F90B1007CA9D6 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		566190A1208F90B1007CA9D6 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		566190A3208F915C007CA9D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		566190A4208F915C007CA9D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		566190A6208FA42A007CA9D6 /* FWZoomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWZoomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		566190A8208FA42A007CA9D6 /* FWZoomCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWZoomCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		566190A9208FA42A007CA9D6 /* FWZoomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWZoomCollectionView.m; sourceTree = "<group>"; };
-		566190AA208FA42B007CA9D6 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		566190AC208FA42B007CA9D6 /* Next_22px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Next_22px.png; sourceTree = "<group>"; };
-		566190AE208FA42B007CA9D6 /* FWZoomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWZoomCollectionView.h; sourceTree = "<group>"; };
-		566190B0208FA42B007CA9D6 /* SwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
-		566190B1208FA42B007CA9D6 /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		566190B5208FA42C007CA9D6 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
-		566190B7208FA42C007CA9D6 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		568939612091B9FC004E384A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		568939622091B9FC004E384A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		568939632091B9FC004E384A /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
@@ -145,6 +140,7 @@
 		568C5B49208A5EBB00742C42 /* ChooseInterestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseInterestViewController.h; sourceTree = "<group>"; };
 		568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseInterestViewController.m; sourceTree = "<group>"; };
 		76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.debug.xcconfig"; sourceTree = "<group>"; };
+		C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhangKeBao-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +158,7 @@
 				563D91B5208F172C00C91C45 /* AssetsLibrary.framework in Frameworks */,
 				563D91AB208F0BF300C91C45 /* SystemConfiguration.framework in Frameworks */,
 				563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */,
+				3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,23 +179,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56386F122093032A00239378 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				56386F0C2093014D00239378 /* MyCollectionViewCell.h */,
+				56386F092093014C00239378 /* MyCollectionViewCell.m */,
+				56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */,
+				56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */,
+				56386F0E2093014E00239378 /* HomepageViewController.h */,
+				56386F0B2093014D00239378 /* TestViewController.m */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		563D91D4208F2D3600C91C45 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				56386F122093032A00239378 /* HomePage */,
 				568939712091BF01004E384A /* image */,
-				566190B7208FA42C007CA9D6 /* DataModel.h */,
-				566190AA208FA42B007CA9D6 /* DataModel.m */,
-				566190AE208FA42B007CA9D6 /* FWZoomCollectionView.h */,
-				566190A9208FA42A007CA9D6 /* FWZoomCollectionView.m */,
-				566190A8208FA42A007CA9D6 /* FWZoomCollectionViewFlowLayout.h */,
-				566190A6208FA42A007CA9D6 /* FWZoomCollectionViewFlowLayout.m */,
-				566190AC208FA42B007CA9D6 /* Next_22px.png */,
-				566190B0208FA42B007CA9D6 /* SwipeViewController.h */,
-				566190B1208FA42B007CA9D6 /* SwipeViewController.m */,
 				568C5B2B208A11D800742C42 /* ApplicaionAppend.h */,
 				568C5B2F208A11D900742C42 /* ApplicaionAppend.m */,
-				56619097208F531B007CA9D6 /* HomePageViewController.h */,
-				56619098208F531B007CA9D6 /* HomePageViewController.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -206,6 +206,7 @@
 		568939712091BF01004E384A /* image */ = {
 			isa = PBXGroup;
 			children = (
+				566190AC208FA42B007CA9D6 /* Next_22px.png */,
 				568939682091B9FD004E384A /* 0.png */,
 				568939622091B9FC004E384A /* 1.png */,
 				568939612091B9FC004E384A /* 2.png */,
@@ -328,6 +329,7 @@
 				563D91B4208F172C00C91C45 /* AssetsLibrary.framework */,
 				563D91AA208F0BF300C91C45 /* SystemConfiguration.framework */,
 				563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */,
+				C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -521,23 +523,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566190BA208FA42C007CA9D6 /* FWZoomCollectionView.m in Sources */,
 				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
-				566190C0208FA42C007CA9D6 /* SwipeViewController.m in Sources */,
 				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
 				568C5AFE208A10EA00742C42 /* main.m in Sources */,
 				568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */,
 				568C5B38208A11D900742C42 /* ImputMessage.m in Sources */,
-				566190BB208FA42C007CA9D6 /* DataModel.m in Sources */,
 				568C5B3C208A11D900742C42 /* LoadingView.m in Sources */,
 				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
-				5661909A208F531B007CA9D6 /* HomePageViewController.m in Sources */,
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
+				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
 				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
-				566190B8208FA42C007CA9D6 /* FWZoomCollectionViewFlowLayout.m in Sources */,
+				56386F112093014E00239378 /* TestViewController.m in Sources */,
+				56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */,
 				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
 				568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */,
 			);

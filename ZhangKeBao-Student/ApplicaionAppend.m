@@ -9,19 +9,23 @@
 #import "ApplicaionAppend.h"
 #import "SwipeViewController.h"
 @interface ApplicaionAppend ()
-
+@property LGSideMenuController* sidemenu;
 @end
 
 @implementation ApplicaionAppend
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",_vc);
-    SwipeViewController* v1=[[SwipeViewController alloc]init];
+    HomepageViewController* v1=[[HomepageViewController alloc]init];
+    //SwipeViewController* v1=[[SwipeViewController alloc]init];
     //HomePageViewController* v1=[[HomePageViewController alloc]init];
+    
     UINavigationController* nav1=[[UINavigationController alloc]initWithRootViewController:v1];
-    nav1.title=@"首页";
-    nav1.tabBarItem.image=[UIImage imageNamed:@"Next_22px"];
+//    UITableViewController* leftViewController=[[UITableViewController alloc]init];
+//    leftViewController.view.backgroundColor=[UIColor blueColor];
+    _sidemenu=[LGSideMenuController sideMenuControllerWithRootViewController:nav1 leftViewController:nil rightViewController:nil];
+    v1.sidemenu=_sidemenu;
+    
     //v1.tabBarItem.badgeValue=@"123";
     UIViewController* v2=[[UIViewController alloc]init];
     UINavigationController* nav2 =[[UINavigationController alloc]initWithRootViewController:v2];
@@ -59,16 +63,13 @@
     nav5.title=@"个人中心";
     nav5.tabBarItem.image=[UIImage imageNamed:@"tag"];
     nav5.view.backgroundColor=[UIColor whiteColor];
-    self.viewControllers=@[nav1,nav2,nav3,nav4,nav5];
+    self.viewControllers=@[_sidemenu,nav2,nav3,nav4,nav5];
     self.tabBar.backgroundColor=[UIColor darkGrayColor];
-    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

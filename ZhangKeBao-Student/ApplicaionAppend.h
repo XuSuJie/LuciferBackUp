@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 //#import "ViewController.h"
-#import "HomePageViewController.h"
+#import "HomepageViewController.h"
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 #define TABBAR_HEIGHT [[UITabBarController alloc]init].tabBar.frame.size.height
 @interface ApplicaionAppend : UITabBarController
-@property(weak,nonatomic) UIViewController* vc;
 @end
