@@ -13,7 +13,7 @@
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @interface ImputMessage : UIViewController
 
-@property UIViewController* currentView;//当前显示视图
+@property UIViewController* currentViewController;//当前显示视图
 @property ChooseInterestViewController* view1;
 @property PersonalMessage* view2;
 @property RegisterSucceed* view3;

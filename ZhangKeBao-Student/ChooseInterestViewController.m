@@ -29,10 +29,13 @@
     //标签云
     DBSphereView* cloud=[[DBSphereView alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-160, 100, 320, 320)];
     [self  reloadTags:cloud];
+    //下一页按钮
     _nextbtn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width-60, 10, 50, 50)];
-    [_nextbtn setImage:[UIImage imageNamed:@"Next_22px.png"] forState:UIControlStateNormal];
+    [_nextbtn setTitle:@">" forState:UIControlStateNormal];
+    [_nextbtn setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+    _nextbtn.titleLabel.font=[UIFont systemFontOfSize:45.0];
+    _nextbtn.backgroundColor=[UIColor whiteColor];
     [_nextbtn addTarget:self action:@selector(nextpage) forControlEvents:UIControlEventTouchUpInside];
-    [_nextbtn setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:_nextbtn];
 }
 -(void)nextpage{
@@ -93,10 +96,15 @@
 //控制器即将显示时
 - (void)viewWillAppear:(BOOL)animated{
     [_button setBackgroundColor:[UIColor blueColor]];
+    //发送通知
+    NSDictionary *dict = @{@"view":self};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeView" object:nil userInfo:dict];
+    NSLog(@"1显示");
 }
 //控制器消失
-- (void)viewDidDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated{
     [_button setBackgroundColor:[UIColor grayColor]];
+    NSLog(@"1消失");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

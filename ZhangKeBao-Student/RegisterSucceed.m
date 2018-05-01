@@ -23,8 +23,10 @@
     [self.view addSubview:label];
     //上一页
     _prebtn=[[UIButton alloc]initWithFrame:CGRectMake( 10, 10, 50, 50)];
-    [_prebtn setImage:[UIImage imageNamed:@"Next_22px.png"] forState:UIControlStateNormal];
-    [_prebtn setBackgroundColor:[UIColor blueColor]];
+    [_prebtn setTitle:@"<" forState:UIControlStateNormal];
+    [_prebtn setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+    _prebtn.titleLabel.font=[UIFont systemFontOfSize:45.0];
+    _prebtn.backgroundColor=[UIColor whiteColor];
     [_prebtn addTarget:self action:@selector(prepage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_prebtn];
     //画圆弧
@@ -36,11 +38,16 @@
 }
 //控制器即将显示时
 - (void)viewWillAppear:(BOOL)animated{
-        [_button setBackgroundColor:[UIColor blueColor]];
+    [_button setBackgroundColor:[UIColor blueColor]];
+    NSDictionary *dict = @{@"view":self};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeView" object:nil userInfo:dict];
+    NSLog(@"3 appear");
 }
 //控制器消失
-- (void)viewDidDisappear:(BOOL)animated{
-        [_button setBackgroundColor:[UIColor grayColor]];
+- (void)viewWillDisappear:(BOOL)animated{
+    [_button setBackgroundColor:[UIColor grayColor]];
+    //[_button setSelected:NO];
+    NSLog(@"3 disappear");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

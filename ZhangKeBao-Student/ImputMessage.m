@@ -25,17 +25,27 @@
     _view3=[[RegisterSucceed alloc]init];
     [_view3.view setFrame:CGRectMake(0, 120, SCREEN_SIZE.width, SCREEN_SIZE.height-100)];
     //按钮1，2，3
-    _button1=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3-100, 50, 100, 40)];
+    _button1=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_button1 setFrame:CGRectMake(SCREEN_SIZE.width/3-80, 50, 80, 20)];
     [_button1 setTitle:@"选择兴趣" forState:UIControlStateNormal];
+    [_button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_button1 setBackgroundColor:[UIColor blueColor]];
+    _button1.layer.cornerRadius=10;
     _button1.tag=0;
-    _button2=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 50, 100, 40)];
+    _button2=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_button2 setFrame:CGRectMake(SCREEN_SIZE.width/2-40, 50, 80, 20)];
     [_button2 setTitle:@"完善信息" forState:UIControlStateNormal];
+    [_button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_button2 setBackgroundColor:[UIColor grayColor]];
+    _button2.layer.cornerRadius=10;
     _button2.tag=1;
-    _button3=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/3*2, 50, 100, 40)];
+    _button3=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_button3 setFrame:CGRectMake(SCREEN_SIZE.width/3*2, 50, 80, 20)];
     [_button3 setTitle:@"完成注册" forState:UIControlStateNormal];
+    [_button3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_button3 setBackgroundColor:[UIColor grayColor]];
+    _button3.layer.cornerRadius=10;
+    _button3.enabled=NO;
     _button3.tag=2;
     //事件响应
     [_button1 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
@@ -54,17 +64,20 @@
     [self addChildViewController:_view2];
     [self addChildViewController:_view3];
     [self.view addSubview:_view1.view];
-    _currentView=_view1;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeView:) name:@"changeView" object:nil];
+}
+-(void)changeView:(NSNotification *)notification{
+    _currentViewController=notification.userInfo[@"view"];
 }
 -(void)showview:(UIButton* )button{
     //点击了其他按钮
-    if(self.childViewControllers[button.tag]!=_currentView){
-        [_currentView.view removeFromSuperview];
-        if (_currentView==_view1) {
+    if(self.childViewControllers[button.tag]!=_currentViewController){
+        [_currentViewController.view removeFromSuperview];
+        if (_currentViewController==_view1) {
             _view2.Interest=_view1.interest;//标签云的标签数组传到界面2
         }
+        //显示已选择界面
         [self.view addSubview:self.childViewControllers[button.tag].view];
-        _currentView=self.childViewControllers[button.tag];
     }
 }
 - (void)didReceiveMemoryWarning {

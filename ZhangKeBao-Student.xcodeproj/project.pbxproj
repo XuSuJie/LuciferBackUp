@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */; };
-		56367AC7208D6A1500C8C8BB /* PersonalMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */; };
+		56169C362097654900FA65C1 /* LeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C352097654900FA65C1 /* LeftSideMenuViewController.m */; };
+		56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C3820976A2000FA65C1 /* MyTableViewController.m */; };
 		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
 		56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */; };
-		56386F112093014E00239378 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* TestViewController.m */; };
+		56386F112093014E00239378 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* HomepageViewController.m */; };
 		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
 		563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D91A6208EDF4800C91C45 /* drawGraphics.m */; };
 		563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -25,7 +26,6 @@
 		563D91C1208F177800C91C45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C0208F177800C91C45 /* Foundation.framework */; };
 		563D91C5208F17ED00C91C45 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C4208F17ED00C91C45 /* libstdc++.tbd */; };
 		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
-		566190A2208F90B1007CA9D6 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A1208F90B1007CA9D6 /* MyCollectionViewCell.m */; };
 		566190A5208F915C007CA9D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A4208F915C007CA9D6 /* ViewController.m */; };
 		566190BD208FA42C007CA9D6 /* Next_22px.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190AC208FA42B007CA9D6 /* Next_22px.png */; };
 		566190C4208FA42C007CA9D6 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190B5208FA42C007CA9D6 /* 8.png */; };
@@ -72,10 +72,13 @@
 
 /* Begin PBXFileReference section */
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
-		56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalMessage.xib; sourceTree = "<group>"; };
+		56169C342097654900FA65C1 /* LeftSideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSideMenuViewController.h; sourceTree = "<group>"; };
+		56169C352097654900FA65C1 /* LeftSideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSideMenuViewController.m; sourceTree = "<group>"; };
+		56169C3720976A2000FA65C1 /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		56169C3820976A2000FA65C1 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		56386F092093014C00239378 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		56386F0B2093014D00239378 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		56386F0B2093014D00239378 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
 		56386F0C2093014D00239378 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		56386F0E2093014E00239378 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
@@ -95,8 +98,6 @@
 		563D91C4208F17ED00C91C45 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
 		564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMessage.m; sourceTree = "<group>"; };
-		566190A0208F90B1007CA9D6 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
-		566190A1208F90B1007CA9D6 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		566190A3208F915C007CA9D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		566190A4208F915C007CA9D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		566190AC208FA42B007CA9D6 /* Next_22px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Next_22px.png; sourceTree = "<group>"; };
@@ -187,7 +188,9 @@
 				56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */,
 				56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */,
 				56386F0E2093014E00239378 /* HomepageViewController.h */,
-				56386F0B2093014D00239378 /* TestViewController.m */,
+				56386F0B2093014D00239378 /* HomepageViewController.m */,
+				56169C342097654900FA65C1 /* LeftSideMenuViewController.h */,
+				56169C352097654900FA65C1 /* LeftSideMenuViewController.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -262,10 +265,8 @@
 			children = (
 				568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */,
 				568C5B09208A10EA00742C42 /* Info.plist */,
-				566190A0208F90B1007CA9D6 /* MyCollectionViewCell.h */,
 				566190A3208F915C007CA9D6 /* ViewController.h */,
 				566190A4208F915C007CA9D6 /* ViewController.m */,
-				566190A1208F90B1007CA9D6 /* MyCollectionViewCell.m */,
 			);
 			path = "ZhangKeBao-StudentTests";
 			sourceTree = "<group>";
@@ -292,7 +293,6 @@
 				568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */,
 				564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */,
 				564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */,
-				56367AC6208D6A1500C8C8BB /* PersonalMessage.xib */,
 				563C2B56208CC7D400F1A17A /* RegisterSucceed.h */,
 				563C2B57208CC7D400F1A17A /* RegisterSucceed.m */,
 			);
@@ -312,6 +312,8 @@
 				568C5B27208A11D800742C42 /* Textfield.m */,
 				563D91A5208EDF4800C91C45 /* drawGraphics.h */,
 				563D91A6208EDF4800C91C45 /* drawGraphics.m */,
+				56169C3720976A2000FA65C1 /* MyTableViewController.h */,
+				56169C3820976A2000FA65C1 /* MyTableViewController.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -452,7 +454,6 @@
 				5689396F2091B9FD004E384A /* 7.png in Resources */,
 				5689396B2091B9FD004E384A /* 6.png in Resources */,
 				566190C4208FA42C007CA9D6 /* 8.png in Resources */,
-				56367AC7208D6A1500C8C8BB /* PersonalMessage.xib in Resources */,
 				5689396D2091B9FD004E384A /* 3.png in Resources */,
 				568939692091B9FD004E384A /* 2.png in Resources */,
 				5689396A2091B9FD004E384A /* 1.png in Resources */,
@@ -524,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
+				56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */,
 				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
 				568C5AFE208A10EA00742C42 /* main.m in Sources */,
 				568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */,
@@ -532,11 +534,12 @@
 				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
+				56169C362097654900FA65C1 /* LeftSideMenuViewController.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
 				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
 				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
-				56386F112093014E00239378 /* TestViewController.m in Sources */,
+				56386F112093014E00239378 /* HomepageViewController.m in Sources */,
 				56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */,
 				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
 				568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */,
@@ -548,7 +551,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				566190A5208F915C007CA9D6 /* ViewController.m in Sources */,
-				566190A2208F90B1007CA9D6 /* MyCollectionViewCell.m in Sources */,
 				568C5B08208A10EA00742C42 /* ZhangKeBao_StudentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +617,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -639,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -673,7 +675,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -691,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

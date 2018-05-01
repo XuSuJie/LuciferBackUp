@@ -5,7 +5,6 @@
 //  Created by 徐溯杰 on 2018/4/24.
 //  Copyright © 2018年 fjnu. All rights reserved.
 //
-#import"ViewController.h"
 #import "HomepageViewController.h"
 
 @implementation HomepageViewController
@@ -17,9 +16,9 @@ static NSString * const ID = @"cell";
     MyCollectionViewFlowLayout* layout=[[MyCollectionViewFlowLayout alloc]init];
     layout.itemSize = CGSizeMake(self.view.frame.size.width-200, self.view.frame.size.height-350);
     // 创建collection 设置尺寸
-    CGFloat collectionW = self.view.frame.size.width-100;
+    CGFloat collectionW = self.view.frame.size.width-150;
     CGFloat collectionH = self.view.frame.size.height-250;
-    CGFloat collectionX = 50;
+    CGFloat collectionX = 75;
     CGFloat collectionY = 80;
     CGRect frame = CGRectMake(collectionX, collectionY, collectionW, collectionH);
     UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
@@ -36,30 +35,44 @@ static NSString * const ID = @"cell";
     UIBarButtonItem* rightbtn=[[UIBarButtonItem alloc]initWithTitle:@"签到" style:UIBarButtonItemStylePlain target:self action:@selector(showLeft)];
     self.navigationItem.rightBarButtonItem=rightbtn;
     //设置侧边栏
-    UITableViewController* leftViewController=[[UITableViewController alloc]init];
-    leftViewController.view.backgroundColor=[UIColor whiteColor];
-    [_sidemenu setLeftViewController:leftViewController];
+    _leftViewController=[[LeftSideMenuViewController alloc]init];
+    [_sidemenu setLeftViewController:_leftViewController];
     //配置侧边栏宽度和动画
-    _sidemenu.leftViewWidth = SCREEN_SIZE.width-100;
+    _sidemenu.leftViewWidth = SCREEN_SIZE.width;
     _sidemenu.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     _sidemenu.title=@"首页";//标签栏的标题
     _sidemenu.tabBarItem.image=[UIImage imageNamed:@"Next_22px"];//标签栏的icon
+    //配置手势
+    UISwipeGestureRecognizer* swipe=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(showLeft)];
+    swipe.direction=UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipe];
+    UISwipeGestureRecognizer* swipe2=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(dismissLeft)];
+    swipe2.direction=UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipe2];
+    _leftViewController.sidemenu=_sidemenu;
+    //添加遮盖屏
+//    _coverwindow=[[UIWindow alloc]initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width, SCREEN_SIZE.height)];
+//    _coverwindow.backgroundColor=[UIColor colorWithWhite:0 alpha:0.5];
+//    _coverwindow.windowLevel=UIWindowLevelNormal;
+//    _coverwindow.hidden=YES;
+//    [[UIApplication sharedApplication].keyWindow addSubview:_coverwindow];
+    //[[UIApplication sharedApplication].keyWindow addSubview:_leftViewController.view];
+    //_leftViewController.view.hidden=YES;
 }
 -(void)showLeft{
+    //_sidemenu.tabBarController.tabBar.hidden=YES;
+    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //window.rootViewController=_sidemenu;
+    //_coverwindow.hidden=NO;
+    //_leftViewController.view.hidden=NO;
     [_sidemenu showLeftViewAnimated];
-    //动画配置
-//    CATransition* transition= [CATransition animation];
-//    transition.type=kCATransitionMoveIn;
-//    transition.subtype=kCATransitionFromLeft;
-//    transition.duration=0.3;
-//    [self.view.window.layer removeAllAnimations];
-//    [self.view.window.layer addAnimation:transition forKey:nil];
-    //转场方式
-//    vc.modalPresentationStyle=UIModalPresentationCustom;
-
-//    self.definesPresentationContext=YES;设置背景
-//    [self presentViewController:vc animated:NO completion:nil];
-    //vc.view.superview.backgroundColor=[UIColor clearColor];
+}
+-(void)dismissLeft{
+    //_sidemenu.tabBarController.tabBar.hidden=NO;
+    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //window.rootViewController=_sidemenu.parentViewController;
+    //_leftViewController.view.hidden=YES;
+    [_sidemenu hideLeftViewAnimated];
 }
 //配置cell
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -73,13 +86,8 @@ static NSString * const ID = @"cell";
     return 8;
 }
 -(void)viewWillAppear:(BOOL)animated{
-    //    if (self.presentedViewController!=nil) {
-    //        _loading=[[LoadingView alloc]init];
-    //        [_loading show];
-    //    }
 }
 -(void)viewWillDisappear:(BOOL)animated{
-    //    [_loading disappear];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

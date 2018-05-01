@@ -17,18 +17,14 @@
 @property UIButton* nextbtn;
 @property NSString* token;
 @property NSMutableArray* Interest;//标签数组
-@property NSArray* Array1;//高考所在地
-@property NSArray* Array2;//学校所在地
+@property NSArray* Array;//高考所在地
 @property NSMutableDictionary* tags;//标签字典
 @property NSDictionary* message;
 @property UIPickerView* picker;
 @property UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UITextView *ExamArea;
-@property (weak, nonatomic) IBOutlet UITextView *SchoArea;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *SexSegment;
-@property (weak, nonatomic) IBOutlet UITextField *NameTextfield;
-@property (weak, nonatomic) IBOutlet UITextField *SchoolTextfield;
-@property (weak, nonatomic) IBOutlet UITextField *ClassTextfield;
-@property (weak, nonatomic) IBOutlet UITextField *GradeTextfield;
--(IBAction)chooseExamPosition:(UIButton*)button;
+@property (strong, nonatomic)  UITextView *ExamArea;
+@property (strong, nonatomic)  UISegmentedControl *SexSegment;
+@property (strong, nonatomic)  UITextField *NameTextfield;
+@property (strong, nonatomic)  UITextField *GradeTextfield;
+-(void)chooseExamPosition:(UIButton*)button;
 @end

@@ -33,8 +33,14 @@
     CGContextStrokePath(context);
     //开始绘制
     CGContextBeginPath(context);
-    CGContextMoveToPoint(context, 167, 248);
-    CGContextAddLineToPoint(context, 314, 248);
+    CGContextMoveToPoint(context, 167, 169);
+    CGContextAddLineToPoint(context, 364, 169);
+    //绘制完成
+    CGContextStrokePath(context);
+    //开始绘制
+    CGContextBeginPath(context);
+    CGContextMoveToPoint(context, 167, 208);
+    CGContextAddLineToPoint(context, 314, 208);
     //绘制完成
     CGContextStrokePath(context);
 }
