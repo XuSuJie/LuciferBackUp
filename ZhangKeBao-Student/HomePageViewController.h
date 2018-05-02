@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LeftSideMenuViewController.h"
+#import "NetWorkManager.h"
+#import "LoginedUser.h"
 #import "MyCollectionViewFlowLayout.h"
 #import "MyCollectionViewCell.h"
 #import <LGSideMenuController/LGSideMenuController.h>

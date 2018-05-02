@@ -334,7 +334,7 @@ rightViewBackgroundImageFinalScale = _rightViewBackgroundImageFinalScale;
     self.rightViewSwipeGestureEnabled = YES;
 
     self.swipeGestureArea = LGSideMenuSwipeGestureAreaBorders;
-    self.leftViewSwipeGestureRange = LGSideMenuSwipeGestureRangeMake(44.0, 44.0);
+    self.leftViewSwipeGestureRange = LGSideMenuSwipeGestureRangeMake(0.0, 0.0);
     self.rightViewSwipeGestureRange = LGSideMenuSwipeGestureRangeMake(44.0, 44.0);
 
     self.leftViewAnimationDuration = 0.5;

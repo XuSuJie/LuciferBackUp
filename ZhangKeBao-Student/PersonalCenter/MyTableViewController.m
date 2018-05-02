@@ -9,10 +9,25 @@
 #import "MyTableViewController.h"
 
 @interface MyTableViewController ()
-
+@property (strong, nonatomic) NSArray *titlesArray;
 @end
 
 @implementation MyTableViewController
+
+- (id)init {
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+        self.titlesArray = @[@"我的角色形象",@"测评报告",@"错题收藏",@"能力变化曲线表",@"VIP会员",@"直击高考"];
+        _animation=[CATransition animation];
+        _animation.duration=0.7;
+        _animation.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        _animation.type=kCATransitionPush;
+        _animation.subtype=kCATransitionFromRight;
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,16 +51,29 @@
 }
 //一节的cell数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return self.titlesArray.count;根据数组元素的数量来确定cell的数量
     return 6;
 }
 //配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
-    cell.textLabel.text=@"我的角色形象";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    //cell.imageView.image=[UIImage imageNamed:@""];
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //cell.textLabel.font = [UIFont systemFontOfSize:16.0];
+    cell.textLabel.text = self.titlesArray[indexPath.row];
     return cell;
 }
-
+//cell的点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TableViewInsideViewController* vc=[[TableViewInsideViewController alloc]init];
+    vc.title=self.titlesArray[indexPath.row];
+    [self.view.window.layer addAnimation:_animation forKey:nil];
+    [self presentViewController:vc animated:NO completion:nil];
+//    MainViewController* mainViewC=[[MainViewController alloc]init];
+//    mainViewC.rootViewController = navi;
+//    [mainViewC setupWithType:indexPath.row];
+//    navi.title=self.titlesArray[indexPath.row];
+}
 
 /*
 // Override to support conditional editing of the table view.

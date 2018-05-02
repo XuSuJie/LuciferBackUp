@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginedUser.h"
 #import "Textfield.h"
 #import "RegisterViewController.h"
 #import "NetWorkManager.h"

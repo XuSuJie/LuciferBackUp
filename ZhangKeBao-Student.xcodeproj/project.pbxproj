@@ -25,6 +25,8 @@
 		563D91BF208F176F00C91C45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91BE208F176F00C91C45 /* UIKit.framework */; };
 		563D91C1208F177800C91C45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C0208F177800C91C45 /* Foundation.framework */; };
 		563D91C5208F17ED00C91C45 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91C4208F17ED00C91C45 /* libstdc++.tbd */; };
+		563E4F74209900DB0062BACF /* TableViewInsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E4F73209900DB0062BACF /* TableViewInsideViewController.m */; };
+		5643B79E209939D900B5F172 /* LoginedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643B79D209939D900B5F172 /* LoginedUser.m */; };
 		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
 		566190A5208F915C007CA9D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A4208F915C007CA9D6 /* ViewController.m */; };
 		566190BD208FA42C007CA9D6 /* Next_22px.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190AC208FA42B007CA9D6 /* Next_22px.png */; };
@@ -96,6 +98,10 @@
 		563D91BE208F176F00C91C45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		563D91C0208F177800C91C45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		563D91C4208F17ED00C91C45 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		563E4F72209900DB0062BACF /* TableViewInsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewInsideViewController.h; sourceTree = "<group>"; };
+		563E4F73209900DB0062BACF /* TableViewInsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewInsideViewController.m; sourceTree = "<group>"; };
+		5643B79C209939D900B5F172 /* LoginedUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginedUser.h; sourceTree = "<group>"; };
+		5643B79D209939D900B5F172 /* LoginedUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginedUser.m; sourceTree = "<group>"; };
 		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
 		564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMessage.m; sourceTree = "<group>"; };
 		566190A3208F915C007CA9D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -183,10 +189,6 @@
 		56386F122093032A00239378 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				56386F0C2093014D00239378 /* MyCollectionViewCell.h */,
-				56386F092093014C00239378 /* MyCollectionViewCell.m */,
-				56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */,
-				56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */,
 				56386F0E2093014E00239378 /* HomepageViewController.h */,
 				56386F0B2093014D00239378 /* HomepageViewController.m */,
 				56169C342097654900FA65C1 /* LeftSideMenuViewController.h */,
@@ -198,12 +200,24 @@
 		563D91D4208F2D3600C91C45 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				563E4F71209900760062BACF /* PersonalCenter */,
 				56386F122093032A00239378 /* HomePage */,
 				568939712091BF01004E384A /* image */,
 				568C5B2B208A11D800742C42 /* ApplicaionAppend.h */,
 				568C5B2F208A11D900742C42 /* ApplicaionAppend.m */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		563E4F71209900760062BACF /* PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				56169C3720976A2000FA65C1 /* MyTableViewController.h */,
+				56169C3820976A2000FA65C1 /* MyTableViewController.m */,
+				563E4F72209900DB0062BACF /* TableViewInsideViewController.h */,
+				563E4F73209900DB0062BACF /* TableViewInsideViewController.m */,
+			);
+			path = PersonalCenter;
 			sourceTree = "<group>";
 		};
 		568939712091BF01004E384A /* image */ = {
@@ -249,13 +263,13 @@
 			isa = PBXGroup;
 			children = (
 				563D91D4208F2D3600C91C45 /* Application */,
+				568C5B48208A49D200742C42 /* Package */,
+				568C5B47208A499700742C42 /* Login&Register */,
 				568C5AEE208A10E500742C42 /* AppDelegate.h */,
 				568C5AEF208A10E500742C42 /* AppDelegate.m */,
 				568C5AF9208A10EA00742C42 /* LaunchScreen.storyboard */,
 				568C5AFC208A10EA00742C42 /* Info.plist */,
 				568C5AFD208A10EA00742C42 /* main.m */,
-				568C5B48208A49D200742C42 /* Package */,
-				568C5B47208A499700742C42 /* Login&Register */,
 			);
 			path = "ZhangKeBao-Student";
 			sourceTree = "<group>";
@@ -302,6 +316,10 @@
 		568C5B48208A49D200742C42 /* Package */ = {
 			isa = PBXGroup;
 			children = (
+				56386F0C2093014D00239378 /* MyCollectionViewCell.h */,
+				56386F092093014C00239378 /* MyCollectionViewCell.m */,
+				56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */,
+				56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */,
 				568C5B26208A11D700742C42 /* AddSpaceView.h */,
 				568C5B2E208A11D900742C42 /* AddSpaceView.m */,
 				568C5B20208A11D600742C42 /* LoadingView.h */,
@@ -312,8 +330,8 @@
 				568C5B27208A11D800742C42 /* Textfield.m */,
 				563D91A5208EDF4800C91C45 /* drawGraphics.h */,
 				563D91A6208EDF4800C91C45 /* drawGraphics.m */,
-				56169C3720976A2000FA65C1 /* MyTableViewController.h */,
-				56169C3820976A2000FA65C1 /* MyTableViewController.m */,
+				5643B79C209939D900B5F172 /* LoginedUser.h */,
+				5643B79D209939D900B5F172 /* LoginedUser.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -527,6 +545,7 @@
 				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
 				56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */,
 				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
+				563E4F74209900DB0062BACF /* TableViewInsideViewController.m in Sources */,
 				568C5AFE208A10EA00742C42 /* main.m in Sources */,
 				568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */,
 				568C5B38208A11D900742C42 /* ImputMessage.m in Sources */,
@@ -535,6 +554,7 @@
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
 				56169C362097654900FA65C1 /* LeftSideMenuViewController.m in Sources */,
+				5643B79E209939D900B5F172 /* LoginedUser.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
 				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
 				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,

@@ -25,6 +25,14 @@
 }
 
 - (void)testExample {
+    //添加遮盖屏
+    //    _coverwindow=[[UIWindow alloc]initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width, SCREEN_SIZE.height)];
+    //    _coverwindow.backgroundColor=[UIColor colorWithWhite:0 alpha:0.5];
+    //    _coverwindow.windowLevel=UIWindowLevelNormal;
+    //    _coverwindow.hidden=YES;
+    //    [[UIApplication sharedApplication].keyWindow addSubview:_coverwindow];
+    //[[UIApplication sharedApplication].keyWindow addSubview:_leftViewController.view];
+
 //    - (NSURLSessionDataTask *)POST:(NSString *)URLString
 //parameters:(id)parameters
 //success:(void (^)(NSURLSessionDataTask *task, id responseObject))success

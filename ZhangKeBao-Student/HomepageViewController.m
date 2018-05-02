@@ -32,7 +32,7 @@ static NSString * const ID = @"cell";
     UIBarButtonItem* leftbtn=[[UIBarButtonItem alloc]initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(showLeft)];
     self.navigationItem.leftBarButtonItem=leftbtn;
     //签到按钮
-    UIBarButtonItem* rightbtn=[[UIBarButtonItem alloc]initWithTitle:@"签到" style:UIBarButtonItemStylePlain target:self action:@selector(showLeft)];
+    UIBarButtonItem* rightbtn=[[UIBarButtonItem alloc]initWithTitle:@"签到" style:UIBarButtonItemStylePlain target:self action:@selector(SignIn)];
     self.navigationItem.rightBarButtonItem=rightbtn;
     //设置侧边栏
     _leftViewController=[[LeftSideMenuViewController alloc]init];
@@ -40,39 +40,48 @@ static NSString * const ID = @"cell";
     //配置侧边栏宽度和动画
     _sidemenu.leftViewWidth = SCREEN_SIZE.width;
     _sidemenu.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
+    _sidemenu.leftViewAnimationDuration=0.7;
     _sidemenu.title=@"首页";//标签栏的标题
     _sidemenu.tabBarItem.image=[UIImage imageNamed:@"Next_22px"];//标签栏的icon
     //配置手势
+    //修改LGSideMenuController的左滑手势区域为0
     UISwipeGestureRecognizer* swipe=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(showLeft)];
     swipe.direction=UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipe];
-    UISwipeGestureRecognizer* swipe2=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(dismissLeft)];
-    swipe2.direction=UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipe2];
+    
     _leftViewController.sidemenu=_sidemenu;
-    //添加遮盖屏
-//    _coverwindow=[[UIWindow alloc]initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width, SCREEN_SIZE.height)];
-//    _coverwindow.backgroundColor=[UIColor colorWithWhite:0 alpha:0.5];
-//    _coverwindow.windowLevel=UIWindowLevelNormal;
-//    _coverwindow.hidden=YES;
-//    [[UIApplication sharedApplication].keyWindow addSubview:_coverwindow];
-    //[[UIApplication sharedApplication].keyWindow addSubview:_leftViewController.view];
-    //_leftViewController.view.hidden=YES;
 }
 -(void)showLeft{
-    //_sidemenu.tabBarController.tabBar.hidden=YES;
-    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    //window.rootViewController=_sidemenu;
-    //_coverwindow.hidden=NO;
-    //_leftViewController.view.hidden=NO;
+    _sidemenu.tabBarController.tabBar.hidden=YES;
     [_sidemenu showLeftViewAnimated];
 }
--(void)dismissLeft{
-    //_sidemenu.tabBarController.tabBar.hidden=NO;
-    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    //window.rootViewController=_sidemenu.parentViewController;
-    //_leftViewController.view.hidden=YES;
-    [_sidemenu hideLeftViewAnimated];
+-(void)SignIn{
+//    UIViewController* vc=[[UIViewController alloc]init];
+//    vc.view.backgroundColor=[UIColor colorWithWhite:0 alpha:0.5];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"今日签到" message:@"总之岁月漫长，然而值得等待" preferredStyle:UIAlertControllerStyleAlert];//今日签到还要显示当天日期
+    [alert addAction:[UIAlertAction actionWithTitle:@"签到" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+        dispatch_queue_t queue =dispatch_queue_create("SignIn", DISPATCH_QUEUE_SERIAL);
+        NetWorkManager* manager=[NetWorkManager sharedManager];
+        [manager.requestSerializer setValue:[LoginedUser sharedInstance].token forHTTPHeaderField:@"token"];
+        NSString *url=@"https://test.extlife.xyz:8443/user/signnow";
+        dispatch_async(queue, ^{
+            [manager  POST:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                 NSLog(@"%@",responseObject[@"data"]);
+                 if([responseObject[@"status"] isEqualToString:@"Success"]){
+                    [self showMessage:@"签到成功"];
+                     //签到积分增加，签到日历上多一天
+                 }
+                 if([responseObject[@"status"] isEqualToString:@"Fail"]){
+                     if([responseObject[@"errormsg"] isEqualToString:@"TodayHasSign"])
+                         [self showMessage:@"今日已签到"];
+                 }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [self showMessage:@"网络错误,签到失败"];
+            }];
+        });
+    }]];
+    [self presentViewController:alert animated:true completion:nil];
 }
 //配置cell
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -92,5 +101,10 @@ static NSString * const ID = @"cell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)showMessage:(NSString *)Msg {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:Msg preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:true completion:nil];
 }
 @end

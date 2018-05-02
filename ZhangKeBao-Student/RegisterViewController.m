@@ -88,7 +88,6 @@
                     [self showMessage:@"验证码过期"];
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            //dispatch_semaphore_signal(sema);
             NSHTTPURLResponse* urlResponse=(NSHTTPURLResponse*)task.response;
             [self showMessage:[NSString stringWithFormat:@"注册失败,错误%ld",urlResponse.statusCode ]];
         }];

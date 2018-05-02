@@ -141,6 +141,7 @@
                 }
                 else{
                     NSLog(@"%@",responseObject[@"token"]);
+                    [LoginedUser sharedInstance].token=responseObject[@"token"];
                     ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
                     UIWindow *window = [UIApplication sharedApplication].keyWindow;
                     window.rootViewController=app;
@@ -158,6 +159,7 @@
         });
     }];
 }
+//弹窗
 - (void)showMessage:(NSString *)Msg {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:Msg preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
