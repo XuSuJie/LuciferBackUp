@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    HomepageViewController* v1=[[HomepageViewController alloc]init];
+    HomePageViewController* v1=[[HomePageViewController alloc]init];
     UINavigationController* nav1=[[UINavigationController alloc]initWithRootViewController:v1];
 //    UITableViewController* leftViewController=[[UITableViewController alloc]init];
 //    leftViewController.view.backgroundColor=[UIColor blueColor];
@@ -54,13 +54,7 @@
     [label4 setText:@"这是选科界面"];
     [nav4.view addSubview:label4];
     
-    UIViewController* v5=[[UIViewController alloc]init];
-    UINavigationController* nav5 =[[UINavigationController alloc]initWithRootViewController:v5];
-    nav5.title=@"个人中心";
-    nav5.tabBarItem.image=[UIImage imageNamed:@"tag"];
-    nav5.view.backgroundColor=[UIColor whiteColor];
-    
-    self.viewControllers=@[_sidemenu,nav2,nav3,nav4,nav5];
+    self.viewControllers=@[_sidemenu,nav2,nav3,nav4];
     self.tabBar.backgroundColor=[UIColor darkGrayColor];
 }
 - (void)didReceiveMemoryWarning {

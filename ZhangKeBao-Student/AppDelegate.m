@@ -5,7 +5,6 @@
 //  Created by 徐溯杰 on 2018/4/20.
 //  Copyright © 2018年 fjnu. All rights reserved.
 //
-
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,14 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    LoginViewController* login=[[LoginViewController alloc]init];
-    UINavigationController* navi =[[UINavigationController alloc]initWithRootViewController:login];
-    self.window.rootViewController=navi;
+//    LoginViewController* login=[[LoginViewController alloc]init];
+//    UINavigationController* navi =[[UINavigationController alloc]initWithRootViewController:login];
+//    self.window.rootViewController=navi;
 //    ImputMessage* view=[ImputMessage new];
-//    view.token=@"e74049f97d3b4e45ade06b4eaf225570";
+//    [LoginedUser sharedInstance].token=@"e74049f97d3b4e45ade06b4eaf225570";
 //    self.window.rootViewController=view;
-//    ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
-//    self.window.rootViewController=app;
+    ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
+    self.window.rootViewController=app;
     [self.window makeKeyAndVisible];
     return YES;
 }

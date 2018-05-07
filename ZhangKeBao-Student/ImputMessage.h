@@ -10,6 +10,7 @@
 #import "ChooseInterestViewController.h"
 #import "PersonalMessage.h"
 #import "RegisterSucceed.h"
+#import "LoginedUser.h"
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @interface ImputMessage : UIViewController
 
@@ -20,6 +21,5 @@
 @property UIButton* button1;
 @property UIButton* button2;
 @property UIButton* button3;
-@property NSString* token;
 
 @end

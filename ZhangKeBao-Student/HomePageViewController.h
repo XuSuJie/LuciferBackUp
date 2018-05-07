@@ -14,7 +14,7 @@
 #import "MyCollectionViewCell.h"
 #import <LGSideMenuController/LGSideMenuController.h>
 #import <LGSideMenuController/UIViewController+LGSideMenuController.h>
-@interface HomepageViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface HomePageViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 @property LGSideMenuController* sidemenu;
 @property UIWindow* coverwindow;
 @property LeftSideMenuViewController* leftViewController;

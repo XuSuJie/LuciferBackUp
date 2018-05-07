@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <DBSphereView.h>
 #import "NetWorkManager.h"
+#import "LoginedUser.h"
 #define BUTTON_SIZE CGRectMake(0,0,40, 30)
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @interface ChooseInterestViewController : UIViewController
@@ -17,5 +18,4 @@
 @property(strong,nonatomic) NSMutableArray* interest;//已选择标签，存储字符串
 @property NSMutableArray* tags;//全部标签，存储按钮
 @property NSDictionary* dictionary;
-@property NSString* token;
 @end

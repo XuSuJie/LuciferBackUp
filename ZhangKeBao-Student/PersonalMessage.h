@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MOFSPickerManager.h>
+#import "LoginedUser.h"
 #import "NetWorkManager.h"
 #import "drawGraphics.h"
 @interface PersonalMessage : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
@@ -15,7 +16,6 @@
 @property UIButton* button;//完善信息按钮
 @property UIButton* prebtn;
 @property UIButton* nextbtn;
-@property NSString* token;
 @property NSMutableArray* Interest;//标签数组
 @property NSArray* Array;//高考所在地
 @property NSMutableDictionary* tags;//标签字典

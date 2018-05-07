@@ -11,13 +11,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView* view=[[UIView alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width-80, 0, 80, SCREEN_SIZE.height)];
+    UIView* rightView=[[UIView alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width-80, 0, 80, SCREEN_SIZE.height)];
     
     //点击收回侧边栏
     UITapGestureRecognizer* tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(isPointAtArea:)];
     tap.numberOfTapsRequired=1;
     tap.numberOfTouchesRequired=1;
-    [view addGestureRecognizer:tap];
+    [rightView addGestureRecognizer:tap];
     //滑动收回侧边栏
     UISwipeGestureRecognizer* swipe=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(dismissLeft)];
     swipe.direction=UISwipeGestureRecognizerDirectionLeft;
@@ -30,27 +30,32 @@
 //    UIView* content=[[UIView alloc]initWithFrame:CGRectMake(0, 180, SCREEN_SIZE.width-80, 10)];
 //    content.backgroundColor=[UIColor whiteColor];
     //
-    UIViewController* vc2=[[UIViewController alloc]init];
-    vc2.view.frame=CGRectMake(0, SCREEN_SIZE.height-50, SCREEN_SIZE.width-80, 50);
-    vc2.view.backgroundColor=[UIColor whiteColor];
+    UIViewController* vc3=[[UIViewController alloc]init];
+    vc3.view.frame=CGRectMake(0, SCREEN_SIZE.height-50, SCREEN_SIZE.width-80, 50);
+    vc3.view.backgroundColor=[UIColor whiteColor];
     //
     UIView* content2=[[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_SIZE.height-55, SCREEN_SIZE.width-80, 5)];
     content2.backgroundColor=[UIColor whiteColor];
     //
+    UIViewController* vc2=[[UIViewController alloc]init];
+    vc2.view.backgroundColor=[UIColor whiteColor];
+    vc2.view.frame=CGRectMake(0, 180, SCREEN_SIZE.width-80, SCREEN_SIZE.height-255);
     MyTableViewController* table=[[MyTableViewController alloc]init];
     table.view.backgroundColor=[UIColor whiteColor];
-    table.view.frame=CGRectMake(0, 180, SCREEN_SIZE.width-80, SCREEN_SIZE.height-255);
+    table.view.frame=CGRectMake(0, 0, SCREEN_SIZE.width-80, 44*6);
     table.sidemenu=_sidemenu;
+    [vc2 addChildViewController:table];
+    [vc2.view addSubview:table.view];
     //
     [self addChildViewController:vc];
-    [self addChildViewController:table];
     [self addChildViewController:vc2];
+    [self addChildViewController:vc3];
     [self.view addSubview:vc.view];
    // [self.view addSubview:content];
-    [self.view addSubview:table.view];
-    [self.view addSubview:content2];
     [self.view addSubview:vc2.view];
-    [self.view addSubview:view];
+    [self.view addSubview:content2];
+    [self.view addSubview:vc3.view];
+    [self.view addSubview:rightView];
     //[self.view addSubview:contentvc.view];
     //vc2.edgesForExtendedLayout=UIRectEdgeTop;
 }

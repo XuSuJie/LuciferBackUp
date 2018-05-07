@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
 #import "ViewController.h"
+#import "LoginedUser.h"
 #import "ApplicaionAppend.h"
 #define TABBAR_HEIGHT [[UITabBarController alloc]init].tabBar.frame.size.height
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

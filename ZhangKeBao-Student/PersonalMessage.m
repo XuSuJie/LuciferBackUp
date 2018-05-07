@@ -122,7 +122,7 @@
         return;
     }
     NetWorkManager* manager=[NetWorkManager sharedManager];
-    [manager.requestSerializer setValue:_token forHTTPHeaderField:@"token"];
+    [manager.requestSerializer setValue:[LoginedUser sharedInstance].token forHTTPHeaderField:@"token"];
     //    _tags=[[NSMutableDictionary alloc]initWithCapacity:0];
     //    for (NSInteger i=0;i<_Interest.count; i++) {
     //        NSString* key=[NSString stringWithFormat:@"%ld",i];

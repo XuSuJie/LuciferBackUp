@@ -52,8 +52,6 @@
     [_button2 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
     [_button3 addTarget:self action:@selector(showview:) forControlEvents:UIControlEventTouchUpInside];
     //传参
-    _view1.token=_token;
-    _view2.token=_token;//传入从注册界面获得的token
     _view1.button=_button1;
     _view2.button=_button2;
     _view3.button=_button3;

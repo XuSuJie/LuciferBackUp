@@ -12,7 +12,7 @@
 		56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C3820976A2000FA65C1 /* MyTableViewController.m */; };
 		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
 		56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */; };
-		56386F112093014E00239378 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* HomepageViewController.m */; };
+		56386F112093014E00239378 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* HomePageViewController.m */; };
 		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
 		563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D91A6208EDF4800C91C45 /* drawGraphics.m */; };
 		563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -53,6 +53,11 @@
 		568C5B3C208A11D900742C42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B31208A11D900742C42 /* LoadingView.m */; };
 		568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B32208A11D900742C42 /* NetWorkManager.m */; };
 		568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */; };
+		56CD0E92209E1D410003FD08 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E8E209E1D410003FD08 /* logo@3x.png */; };
+		56CD0E93209E1D410003FD08 /* QQ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E8F209E1D410003FD08 /* QQ@3x.png */; };
+		56CD0E94209E1D410003FD08 /* 微信@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E90209E1D410003FD08 /* 微信@3x.png */; };
+		56CD0E95209E1D410003FD08 /* 底图@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E91209E1D410003FD08 /* 底图@3x.png */; };
+		56CD0E98209E231B0003FD08 /* MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CD0E97209E231B0003FD08 /* MyImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +85,10 @@
 		56169C3820976A2000FA65C1 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		56386F092093014C00239378 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		56386F0B2093014D00239378 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
+		56386F0B2093014D00239378 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		56386F0C2093014D00239378 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		56386F0E2093014E00239378 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
+		56386F0E2093014E00239378 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		563C2B56208CC7D400F1A17A /* RegisterSucceed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSucceed.h; sourceTree = "<group>"; };
 		563C2B57208CC7D400F1A17A /* RegisterSucceed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSucceed.m; sourceTree = "<group>"; };
 		563D91A5208EDF4800C91C45 /* drawGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawGraphics.h; sourceTree = "<group>"; };
@@ -146,6 +151,12 @@
 		568C5B32208A11D900742C42 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		568C5B49208A5EBB00742C42 /* ChooseInterestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseInterestViewController.h; sourceTree = "<group>"; };
 		568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseInterestViewController.m; sourceTree = "<group>"; };
+		56CD0E8E209E1D410003FD08 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		56CD0E8F209E1D410003FD08 /* QQ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ@3x.png"; sourceTree = "<group>"; };
+		56CD0E90209E1D410003FD08 /* 微信@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@3x.png"; sourceTree = "<group>"; };
+		56CD0E91209E1D410003FD08 /* 底图@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "底图@3x.png"; sourceTree = "<group>"; };
+		56CD0E96209E231B0003FD08 /* MyImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyImage.h; path = Package/MyImage.h; sourceTree = "<group>"; };
+		56CD0E97209E231B0003FD08 /* MyImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyImage.m; path = Package/MyImage.m; sourceTree = "<group>"; };
 		76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.debug.xcconfig"; sourceTree = "<group>"; };
 		C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhangKeBao-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,8 +200,8 @@
 		56386F122093032A00239378 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				56386F0E2093014E00239378 /* HomepageViewController.h */,
-				56386F0B2093014D00239378 /* HomepageViewController.m */,
+				56386F0E2093014E00239378 /* HomePageViewController.h */,
+				56386F0B2093014D00239378 /* HomePageViewController.m */,
 				56169C342097654900FA65C1 /* LeftSideMenuViewController.h */,
 				56169C352097654900FA65C1 /* LeftSideMenuViewController.m */,
 			);
@@ -223,6 +234,10 @@
 		568939712091BF01004E384A /* image */ = {
 			isa = PBXGroup;
 			children = (
+				56CD0E91209E1D410003FD08 /* 底图@3x.png */,
+				56CD0E90209E1D410003FD08 /* 微信@3x.png */,
+				56CD0E8E209E1D410003FD08 /* logo@3x.png */,
+				56CD0E8F209E1D410003FD08 /* QQ@3x.png */,
 				566190AC208FA42B007CA9D6 /* Next_22px.png */,
 				568939682091B9FD004E384A /* 0.png */,
 				568939622091B9FC004E384A /* 1.png */,
@@ -332,6 +347,8 @@
 				563D91A6208EDF4800C91C45 /* drawGraphics.m */,
 				5643B79C209939D900B5F172 /* LoginedUser.h */,
 				5643B79D209939D900B5F172 /* LoginedUser.m */,
+				56CD0E96209E231B0003FD08 /* MyImage.h */,
+				56CD0E97209E231B0003FD08 /* MyImage.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -468,16 +485,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CD0E95209E1D410003FD08 /* 底图@3x.png in Resources */,
+				56CD0E94209E1D410003FD08 /* 微信@3x.png in Resources */,
 				568939702091B9FD004E384A /* 0.png in Resources */,
 				5689396F2091B9FD004E384A /* 7.png in Resources */,
 				5689396B2091B9FD004E384A /* 6.png in Resources */,
 				566190C4208FA42C007CA9D6 /* 8.png in Resources */,
 				5689396D2091B9FD004E384A /* 3.png in Resources */,
 				568939692091B9FD004E384A /* 2.png in Resources */,
+				56CD0E93209E1D410003FD08 /* QQ@3x.png in Resources */,
 				5689396A2091B9FD004E384A /* 1.png in Resources */,
 				5689396C2091B9FD004E384A /* 5.png in Resources */,
 				566190BD208FA42C007CA9D6 /* Next_22px.png in Resources */,
 				5689396E2091B9FD004E384A /* 4.png in Resources */,
+				56CD0E92209E1D410003FD08 /* logo@3x.png in Resources */,
 				568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CD0E98209E231B0003FD08 /* MyImage.m in Sources */,
 				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
 				56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */,
 				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
@@ -559,7 +581,7 @@
 				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
 				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
-				56386F112093014E00239378 /* HomepageViewController.m in Sources */,
+				56386F112093014E00239378 /* HomePageViewController.m in Sources */,
 				56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */,
 				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
 				568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */,

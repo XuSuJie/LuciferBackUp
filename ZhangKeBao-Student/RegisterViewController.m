@@ -76,7 +76,7 @@
             if([responseObject[@"status"] isEqualToString:@"Success"]){
                 [self showMessage:@"注册成功"];
                 ImputMessage* view=[[ImputMessage alloc]init];
-                view.token=responseObject[@"token"];//填写信息界面接收token
+                [LoginedUser sharedInstance].token=responseObject[@"token"];//填写信息界面接收token
                 [self presentViewController:view animated:YES completion:nil];
             }
             if ([responseObject[@"status"] isEqualToString:@"Fail"]) {
