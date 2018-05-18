@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LeftSideMenuViewController.h"
+#import "CoverView.h"
 #import "NetWorkManager.h"
 #import "LoginedUser.h"
 #import "MyCollectionViewFlowLayout.h"
 #import "MyCollectionViewCell.h"
-#import <LGSideMenuController/LGSideMenuController.h>
-#import <LGSideMenuController/UIViewController+LGSideMenuController.h>
+#import "LeftViewDemo.h"
+
 @interface HomePageViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
-@property LGSideMenuController* sidemenu;
-@property UIWindow* coverwindow;
-@property LeftSideMenuViewController* leftViewController;
+@property CoverView* coverView;
 @end

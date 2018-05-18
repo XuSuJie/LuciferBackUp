@@ -26,7 +26,8 @@
     NSString* Path = [resourcePath stringByAppendingPathComponent:@"logo"];
     UIImageView* logoView=[[UIImageView alloc]initWithFrame:CGRectMake(SIZE_SHIFT*70, SIZE_SHIFT*178, SIZE_SHIFT*250, SIZE_SHIFT*86)];
     logoView.contentMode=UIViewContentModeScaleAspectFill;
-    logoView.image=[UIImage imageWithContentsOfFile:Path];
+    UIImage* logoImage=[bgi imageCompressForWidthScale:[UIImage imageWithContentsOfFile:Path] targetWidth:SIZE_SHIFT*250];
+    logoView.image=logoImage;
     [self.view addSubview:logoView];
     self.title=@"";
     //输入框
@@ -51,7 +52,7 @@
     [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
-    //找回密码
+    //忘记密码
     UIButton *passwdBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     passwdBtn.frame = CGRectMake(SIZE_SHIFT*76, SIZE_SHIFT*712, 61.5, 30);
     [passwdBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
@@ -66,7 +67,6 @@
     [registerBtn setTitle:@"新用户注册" forState:UIControlStateNormal];
     registerBtn.layer.masksToBounds = YES;
     registerBtn.layer.cornerRadius = 10;
-    //registerBtn.backgroundColor = [UIColor cyanColor];
     [registerBtn addTarget:self action:@selector(pushRegister) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:registerBtn];
     //标签
@@ -80,7 +80,6 @@
     //qq按钮
     UIButton *qqbutton = [UIButton buttonWithType:UIButtonTypeSystem];
     qqbutton.frame = CGRectMake(SCREEN_SIZE.width/2-SIZE_SHIFT*153,SIZE_SHIFT*1137, 44, 44);
-    NSLog(@"%f",SCREEN_SIZE.height);
     qqbutton.imageView.alpha=0.9;
     NSString* qqfilePath = [resourcePath stringByAppendingPathComponent:@"QQ"];
     [qqbutton setBackgroundImage:[UIImage imageWithContentsOfFile:qqfilePath] forState:UIControlStateNormal];
@@ -95,7 +94,7 @@
     [wxbutton addTarget:self action:@selector(qqLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:wxbutton];
 }
-//找回密码(未编写)
+//忘记密码(未编写)
 - (void)getPassword{
     UIViewController *password = [[UIViewController alloc]init];
     password.view.backgroundColor=[UIColor whiteColor];
@@ -123,21 +122,6 @@
     //[_tencentOAuth getCachedOpenID];
     //[_tencentOAuth getCachedToken];
     //获取用户信息，头像，昵称[_tencentOAuth getUserInfo];
-
-//    UIViewController *qqView = [[UIViewController alloc]init];
-//    [qqView.view setBackgroundColor:[UIColor whiteColor]];
-//    qqView.title=@"QQ登录";
-//    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, 200, 200, 30)];
-//    [label setText:@"掌课宝"];
-//    UIButton* button=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2 - 125, 345, 250, 40)];
-//    [button setTitle:@"登录" forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [button setBackgroundColor:[UIColor blueColor]];
-//    [qqView.view addSubview:button];
-//    [qqView.view addSubview:label];
-//    self.hidesBottomBarWhenPushed=YES;
-//    [self.navigationController pushViewController:qqView animated:YES];
-//    self.hidesBottomBarWhenPushed=NO;
 }
 //登录功能
 -(void)login{
@@ -148,8 +132,13 @@
     LoadingView* loading=[[LoadingView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:loading];
     [loading show];
-    NSString *url=@"https://test.extlife.xyz:8443/user/login";
-    NSDictionary *parameters=@{@"auth":@1,@"phone":phoneText.text,@"password":passwdText.text};
+    NSString* url=@"https://test.extlife.xyz:8443/user/login";
+    NSDictionary* parameters;
+    if([phoneText.text containsString:@"@"]){
+        parameters=@{@"auth":@2,@"phone":phoneText.text,@"password":passwdText.text};//邮箱
+    }
+    else
+        parameters=@{@"auth":@1,@"phone":phoneText.text,@"password":passwdText.text};//手机号
     [[NetWorkManager sharedManager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -169,7 +158,7 @@
                 else{
                     NSLog(@"%@",responseObject[@"token"]);
                     [LoginedUser sharedInstance].token=responseObject[@"token"];
-                    ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
+                    ApplicaionAppend* app=[ApplicaionAppend sharedInstance];
                     UIWindow *window = [UIApplication sharedApplication].keyWindow;
                     window.rootViewController=app;
                 }

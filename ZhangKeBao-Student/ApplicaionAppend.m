@@ -8,19 +8,22 @@
 
 #import "ApplicaionAppend.h"
 @interface ApplicaionAppend ()
-@property LGSideMenuController* sidemenu;
+
 @end
 
 @implementation ApplicaionAppend
-
++(instancetype)sharedInstance{
+    static ApplicaionAppend* tabbarC=nil;
+    if (tabbarC == nil) {
+        tabbarC= [[ApplicaionAppend alloc]init];
+    }
+    return tabbarC;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     HomePageViewController* v1=[[HomePageViewController alloc]init];
     UINavigationController* nav1=[[UINavigationController alloc]initWithRootViewController:v1];
-//    UITableViewController* leftViewController=[[UITableViewController alloc]init];
-//    leftViewController.view.backgroundColor=[UIColor blueColor];
-    _sidemenu=[LGSideMenuController sideMenuControllerWithRootViewController:nav1 leftViewController:nil rightViewController:nil];
-    v1.sidemenu=_sidemenu;
+    nav1.title=@"首页";
     //v1.tabBarItem.badgeValue=@"123";
     
     UIViewController* v2=[[UIViewController alloc]init];
@@ -36,7 +39,7 @@
     
     UIViewController* v3=[[UIViewController alloc]init];
     UINavigationController* nav3 =[[UINavigationController alloc]initWithRootViewController:v3];
-    nav3.title=@"能力测试";
+    nav3.title=@"能力测评";
     nav3.view.backgroundColor=[UIColor whiteColor];
     nav3.tabBarItem.image=[UIImage imageNamed:@"tab_qworld_nor"];
     UILabel* label3=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-75, (SCREEN_SIZE.height-TABBAR_HEIGHT)/2-15, 150, 30)];
@@ -54,8 +57,11 @@
     [label4 setText:@"这是选科界面"];
     [nav4.view addSubview:label4];
     
-    self.viewControllers=@[_sidemenu,nav2,nav3,nav4];
+    self.viewControllers=@[nav1,nav2,nav3,nav4];
     self.tabBar.backgroundColor=[UIColor darkGrayColor];
+    //设置tabbaritem的字体和颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:12.0]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor],NSFontAttributeName:[UIFont systemFontOfSize:12.0]} forState:UIControlStateSelected];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,8 +10,10 @@
 #import "ViewController.h"
 #import "LoginedUser.h"
 #import "ApplicaionAppend.h"
+#import "LeftViewDemo.h"
+#define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 #define TABBAR_HEIGHT [[UITabBarController alloc]init].tabBar.frame.size.height
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow* window;
 @end
 

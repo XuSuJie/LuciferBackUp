@@ -20,7 +20,7 @@
         self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         self.titlesArray = @[@"我的角色形象",@"测评报告",@"错题收藏",@"能力变化曲线表",@"VIP会员",@"直击高考"];
         _animation=[CATransition animation];
-        _animation.duration=0.7;
+        _animation.duration=0.35;
         _animation.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         _animation.type=kCATransitionPush;
         _animation.subtype=kCATransitionFromRight;

@@ -1,5 +1,5 @@
 //
-//  TestViewController.m
+//  HomePageViewController.h
 //  test
 //
 //  Created by 徐溯杰 on 2018/4/24.
@@ -22,7 +22,7 @@ static NSString * const ID = @"cell";
     CGFloat collectionY = 80;
     CGRect frame = CGRectMake(collectionX, collectionY, collectionW, collectionH);
     UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
-    collectionView.backgroundColor =[UIColor whiteColor];// [UIColor colorWithRed:68/255.0 green:83/255.0 blue:244/255.0 alpha:1.0];
+    collectionView.backgroundColor =[UIColor whiteColor];
     collectionView.dataSource = self;
     collectionView.delegate = self;
     [self.view addSubview:collectionView];
@@ -34,26 +34,21 @@ static NSString * const ID = @"cell";
     //签到按钮
     UIBarButtonItem* rightbtn=[[UIBarButtonItem alloc]initWithTitle:@"签到" style:UIBarButtonItemStylePlain target:self action:@selector(SignIn)];
     self.navigationItem.rightBarButtonItem=rightbtn;
-    //设置侧边栏
-    _leftViewController=[[LeftSideMenuViewController alloc]init];
-    [_sidemenu setLeftViewController:_leftViewController];
-    //配置侧边栏宽度和动画
-    _sidemenu.leftViewWidth = SCREEN_SIZE.width;
-    _sidemenu.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-    _sidemenu.leftViewAnimationDuration=0.7;
-    _sidemenu.title=@"首页";//标签栏的标题
-    _sidemenu.tabBarItem.image=[UIImage imageNamed:@"Next_22px"];//标签栏的icon
     //配置手势
-    //修改LGSideMenuController的左滑手势区域为0
     UISwipeGestureRecognizer* swipe=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(showLeft)];
     swipe.direction=UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipe];
-    
-    _leftViewController.sidemenu=_sidemenu;
 }
 -(void)showLeft{
-    _sidemenu.tabBarController.tabBar.hidden=YES;
-    [_sidemenu showLeftViewAnimated];
+        LeftViewDemo* leftvc=[LeftViewDemo sharedInstance];
+        if (!_coverView) {
+            _coverView = [[CoverView alloc] init];
+        }
+        [UIView animateWithDuration:0.2 animations:^{
+            self->_coverView.alpha = 0.8;
+            self.tabBarController.view.frame = CGRectMake(SCREEN_SIZE.width*3/4, 0, SCREEN_SIZE.width, SCREEN_SIZE.height);
+            leftvc.view.frame = CGRectMake(0, 0, SCREEN_SIZE.width*3/4, SCREEN_SIZE.height);
+        }];
 }
 -(void)SignIn{
 //    UIViewController* vc=[[UIViewController alloc]init];

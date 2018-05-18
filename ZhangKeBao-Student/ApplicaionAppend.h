@@ -13,5 +13,5 @@
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 #define TABBAR_HEIGHT [[UITabBarController alloc]init].tabBar.frame.size.height
 @interface ApplicaionAppend : UITabBarController
-
++(instancetype)sharedInstance;
 @end

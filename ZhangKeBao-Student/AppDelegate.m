@@ -22,8 +22,13 @@
 //    ImputMessage* view=[ImputMessage new];
 //    [LoginedUser sharedInstance].token=@"e74049f97d3b4e45ade06b4eaf225570";
 //    self.window.rootViewController=view;
-    ApplicaionAppend* app=[[ApplicaionAppend alloc]init];
+    //tabbar作为根控制器
+    ApplicaionAppend* app=[ApplicaionAppend sharedInstance];
     self.window.rootViewController=app;
+    //侧边栏
+    LeftViewDemo* leftvc=[LeftViewDemo sharedInstance];
+    leftvc.view.frame = CGRectMake(-SCREEN_SIZE.width*3/4+50, 0, -SCREEN_SIZE.width*3/4, SCREEN_SIZE.height);
+    [self.window addSubview:leftvc.view];
     [self.window makeKeyAndVisible];
     return YES;
 }

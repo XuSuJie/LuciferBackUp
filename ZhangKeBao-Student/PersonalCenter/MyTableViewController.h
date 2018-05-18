@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TableViewInsideViewController.h"
-#import <LGSideMenuController/LGSideMenuController.h>
 @interface MyTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-@property LGSideMenuController* sidemenu;
 @property CATransition* animation;
 @end

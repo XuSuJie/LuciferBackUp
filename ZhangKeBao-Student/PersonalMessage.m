@@ -128,7 +128,7 @@
     //        NSString* key=[NSString stringWithFormat:@"%ld",i];
     //        [_tags setObject:[_Interest objectAtIndex:i] forKey:key];
     //    }
-    self->_message=@{@"name" : self->_NameTextfield.text,@"sex":[self->_SexSegment titleForSegmentAtIndex:[self->_SexSegment selectedSegmentIndex]],@"area2" : self->_ExamArea.text,@"grade" : self->_GradeTextfield.text/*,@"area1" : _SchoArea.text,@"school" : _SchoolTextfield.text,@"class" : _ClassTextfield.text*/};
+    self->_message=@{@"name" : self->_NameTextfield.text,@"sex":[self->_SexSegment titleForSegmentAtIndex:[self->_SexSegment selectedSegmentIndex]],@"area2" : self->_ExamArea.text,@"grade" : self->_GradeTextfield.text};
     NSLog(@"%@",self->_message);
     //dispatch_semaphore_t sema = dispatch_semaphore_create(2);
     dispatch_group_t group=dispatch_group_create();

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */; };
-		56169C362097654900FA65C1 /* LeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C352097654900FA65C1 /* LeftSideMenuViewController.m */; };
 		56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C3820976A2000FA65C1 /* MyTableViewController.m */; };
+		5635EAF920AC273100C938C6 /* LeftViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAF820AC273100C938C6 /* LeftViewDemo.m */; };
+		5635EAFC20AC2CFB00C938C6 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAFB20AC2CFB00C938C6 /* CoverView.m */; };
 		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
 		56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */; };
 		56386F112093014E00239378 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* HomePageViewController.m */; };
@@ -79,10 +80,12 @@
 
 /* Begin PBXFileReference section */
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
-		56169C342097654900FA65C1 /* LeftSideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSideMenuViewController.h; sourceTree = "<group>"; };
-		56169C352097654900FA65C1 /* LeftSideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSideMenuViewController.m; sourceTree = "<group>"; };
 		56169C3720976A2000FA65C1 /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		56169C3820976A2000FA65C1 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		5635EAF720AC273100C938C6 /* LeftViewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewDemo.h; sourceTree = "<group>"; };
+		5635EAF820AC273100C938C6 /* LeftViewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewDemo.m; sourceTree = "<group>"; };
+		5635EAFA20AC2CFB00C938C6 /* CoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		5635EAFB20AC2CFB00C938C6 /* CoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
 		56386F092093014C00239378 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		56386F0B2093014D00239378 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
@@ -202,8 +205,10 @@
 			children = (
 				56386F0E2093014E00239378 /* HomePageViewController.h */,
 				56386F0B2093014D00239378 /* HomePageViewController.m */,
-				56169C342097654900FA65C1 /* LeftSideMenuViewController.h */,
-				56169C352097654900FA65C1 /* LeftSideMenuViewController.m */,
+				5635EAF720AC273100C938C6 /* LeftViewDemo.h */,
+				5635EAF820AC273100C938C6 /* LeftViewDemo.m */,
+				5635EAFA20AC2CFB00C938C6 /* CoverView.h */,
+				5635EAFB20AC2CFB00C938C6 /* CoverView.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -575,9 +580,10 @@
 				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
-				56169C362097654900FA65C1 /* LeftSideMenuViewController.m in Sources */,
 				5643B79E209939D900B5F172 /* LoginedUser.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
+				5635EAF920AC273100C938C6 /* LeftViewDemo.m in Sources */,
+				5635EAFC20AC2CFB00C938C6 /* CoverView.m in Sources */,
 				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
 				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
