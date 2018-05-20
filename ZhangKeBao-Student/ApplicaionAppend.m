@@ -37,15 +37,15 @@
     [label2 setText:@"题海测试"];
     [nav2.view addSubview:label2];
     
-    UIViewController* v3=[[UIViewController alloc]init];
+    AbilityViewController* v3=[[AbilityViewController alloc]init];
     UINavigationController* nav3 =[[UINavigationController alloc]initWithRootViewController:v3];
     nav3.title=@"能力测评";
     nav3.view.backgroundColor=[UIColor whiteColor];
     nav3.tabBarItem.image=[UIImage imageNamed:@"tab_qworld_nor"];
-    UILabel* label3=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-75, (SCREEN_SIZE.height-TABBAR_HEIGHT)/2-15, 150, 30)];
-    label3.textAlignment=NSTextAlignmentCenter;
-    [label3 setText:@"这是能力测试界面"];
-    [nav3.view addSubview:label3];
+//    UILabel* label3=[[UILabel alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-75, (SCREEN_SIZE.height-TABBAR_HEIGHT)/2-15, 150, 30)];
+//    label3.textAlignment=NSTextAlignmentCenter;
+//    [label3 setText:@"这是能力测试界面"];
+//    [nav3.view addSubview:label3];
     
     UIViewController* v4=[[UIViewController alloc]init];
     UINavigationController* nav4 =[[UINavigationController alloc]initWithRootViewController:v4];

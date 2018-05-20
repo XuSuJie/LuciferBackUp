@@ -13,7 +13,7 @@
     self = [super init];
     if (self) {
         ApplicaionAppend *tabbar = [ApplicaionAppend sharedInstance];
-        self.backgroundColor = [UIColor darkGrayColor];
+        self.backgroundColor = [UIColor grayColor];
         self.frame = CGRectMake(0, 0, SCREEN_SIZE.width, SCREEN_SIZE.height);
         self.alpha = 0;
         self.userInteractionEnabled = YES;
