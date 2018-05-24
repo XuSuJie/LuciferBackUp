@@ -100,6 +100,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     AbilityTestViewController* vc=[[AbilityTestViewController alloc]init];
     vc.navigationItem.title=self.titlesArray[indexPath.row];
+    vc.btn.tag=indexPath.row;
     //[self.view.window.layer addAnimation:_animation forKey:nil];
     //[self presentViewController:vc animated:NO completion:nil];
     [self.navigationController pushViewController:vc animated:YES];

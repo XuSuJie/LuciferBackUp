@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TestScrollView.h"
+#define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @interface AbilityTestViewController : UIViewController
-
+@property UIButton* btn;
 @end

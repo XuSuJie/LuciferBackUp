@@ -15,28 +15,28 @@ PODS:
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
   - DBSphereTagCloud (1.0.0)
-  - LGSideMenuController (2.1.1)
   - MOFSPickerManager (2.0.2)
+  - RadioButton (1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
   - DBSphereTagCloud (~> 1.0.0)
-  - LGSideMenuController (~> 2.1.1)
   - MOFSPickerManager (~> 2.0.2)
+  - RadioButton (~> 1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - DBSphereTagCloud
-    - LGSideMenuController
     - MOFSPickerManager
+    - RadioButton
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   DBSphereTagCloud: 57b9571e93b3565fc22cd65040eabbada06b56f2
-  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   MOFSPickerManager: d8ab70073d03e9d69d76bc964fed5a9dae2bcafb
+  RadioButton: 7ef053baf6ff0e7f9e777016c28e9ba4e330edba
 
-PODFILE CHECKSUM: 3677111e5a912df9b73dab558e0d52682e275589
+PODFILE CHECKSUM: 0ec80100211b72f9ec345b4d266836e7b6a76c15
 
 COCOAPODS: 1.5.0
