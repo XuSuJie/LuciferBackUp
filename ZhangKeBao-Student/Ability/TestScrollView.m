@@ -22,7 +22,7 @@ static const int viewCount = 3;
         _scrollView = [[UIScrollView alloc] init];
         _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(50, 430, 240, 30)];
         _viewArray = [[NSMutableArray alloc]init];
-        _btn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 660, 100, 35)];
+        _btn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 630, 100, 35)];
         _qaArray = @[
                      [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"如果昨天是明天的话就好了，这样今天就周五了。真实的今天可能是星期几？",@"trueanswer" : @"A", @"userAnswer" : @"3", @"tkselect" : @[@"A：星期三", @"B：星期四", @"C：星期五"]}],
                      [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
@@ -50,21 +50,21 @@ static const int viewCount = 3;
     _pageControl.currentPage = 0;
     [_pageControl addTarget:self action:@selector(currentPageChanged:event:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton* btnleft=[[UIButton alloc]initWithFrame:CGRectMake(50, 600, 100, 35)];
+    UIButton* btnleft=[[UIButton alloc]initWithFrame:CGRectMake(50, 580, 100, 35)];
     btnleft.backgroundColor=[UIColor blueColor];
     [btnleft setTitle:@"上一题" forState:UIControlStateNormal];
     [btnleft setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btnleft addTarget:self action:@selector(pageChange:) forControlEvents:UIControlEventTouchUpInside];
     btnleft.tag=0;
     [self.view addSubview:btnleft];
-    UIButton* btnright=[[UIButton alloc]initWithFrame:CGRectMake(250, 600, 100, 35)];
+    UIButton* btnright=[[UIButton alloc]initWithFrame:CGRectMake(250, 580, 100, 35)];
     btnright.backgroundColor=[UIColor blueColor];
     [btnright setTitle:@"下一题" forState:UIControlStateNormal];
     [btnright setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btnright addTarget:self action:@selector(pageChange:) forControlEvents:UIControlEventTouchUpInside];
     btnright.tag=1;
     [self.view addSubview:btnright];
-    _btn.enabled=NO;
+    //_btn.enabled=NO;
     [_btn setTitle:@"确认" forState:UIControlStateNormal];
     [_btn setBackgroundColor:[UIColor blueColor]];
     [_btn addTarget:self action:@selector(comfirm) forControlEvents:UIControlEventTouchUpInside];
@@ -194,6 +194,10 @@ static const int viewCount = 3;
 -(void)comfirm{
     NSInteger i=0;
     for (NSDictionary* dict in _qaArray) {
+        if( [dict[@"userAnswer"] isEqualToString:@"3"] ){
+            [self showMessage:@"请先完成题目!"];
+            return;
+        }
         if([dict[@"trueanswer"] containsString:dict[@"userAnswer"]])
             i++;
     }

@@ -1,8 +1,10 @@
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/DBSphereTagCloud" "${PODS_CONFIGURATION_BUILD_DIR}/MOFSPickerManager" "${PODS_CONFIGURATION_BUILD_DIR}/RadioButton"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DBSphereTagCloud" "${PODS_ROOT}/Headers/Public/MOFSPickerManager" "${PODS_ROOT}/Headers/Public/RadioButton"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/DBSphereTagCloud" "${PODS_CONFIGURATION_BUILD_DIR}/MOFSPickerManager" "${PODS_CONFIGURATION_BUILD_DIR}/RadioButton"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/DBSphereTagCloud" -isystem "${PODS_ROOT}/Headers/Public/MOFSPickerManager" -isystem "${PODS_ROOT}/Headers/Public/RadioButton"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"DBSphereTagCloud" -l"MOFSPickerManager" -l"RadioButton" -framework "CoreGraphics" -framework "Foundation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DBSphereTagCloud/DBSphereTagCloud.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MOFSPickerManager/MOFSPickerManager.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RadioButton/RadioButton.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "Charts" -framework "DBSphereTagCloud" -framework "MOFSPickerManager" -framework "RadioButton"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

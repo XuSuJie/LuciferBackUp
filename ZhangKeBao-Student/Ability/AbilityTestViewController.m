@@ -37,7 +37,7 @@
 }
 -(void)TestBegin:(UIButton*)btn{
     TestScrollView* vc=[[TestScrollView alloc]init];
-    vc.view.backgroundColor=[UIColor blackColor];
+    vc.view.backgroundColor=[UIColor whiteColor];
     vc.navigationItem.title=self.navigationItem.title;
     [self.navigationController pushViewController:vc animated:YES];
 }

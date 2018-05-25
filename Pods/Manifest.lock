@@ -14,12 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - DBSphereTagCloud (1.0.0)
   - MOFSPickerManager (2.0.2)
   - RadioButton (1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
+  - Charts (~> 3.1.1)
   - DBSphereTagCloud (~> 1.0.0)
   - MOFSPickerManager (~> 2.0.2)
   - RadioButton (~> 1.0)
@@ -27,16 +31,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - Charts
     - DBSphereTagCloud
     - MOFSPickerManager
     - RadioButton
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   DBSphereTagCloud: 57b9571e93b3565fc22cd65040eabbada06b56f2
   MOFSPickerManager: d8ab70073d03e9d69d76bc964fed5a9dae2bcafb
   RadioButton: 7ef053baf6ff0e7f9e777016c28e9ba4e330edba
 
-PODFILE CHECKSUM: 0ec80100211b72f9ec345b4d266836e7b6a76c15
+PODFILE CHECKSUM: c9944766ce1b36dbfb0a93fe99f8a82f859bcbda
 
 COCOAPODS: 1.5.0

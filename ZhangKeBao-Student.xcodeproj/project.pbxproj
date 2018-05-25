@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */; };
+		46ADECF45B69DC5915205426 /* Pods_ZhangKeBao_Student.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879F6A7C79AB22CBB2BB3AA /* Pods_ZhangKeBao_Student.framework */; };
 		560EB9B520AE8D6D0032BA47 /* AbilityTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560EB9B220AE8D6C0032BA47 /* AbilityTestViewController.m */; };
 		560EB9B620AE8D6D0032BA47 /* AbilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560EB9B320AE8D6C0032BA47 /* AbilityTableViewController.m */; };
 		56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C3820976A2000FA65C1 /* MyTableViewController.m */; };
@@ -89,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1879F6A7C79AB22CBB2BB3AA /* Pods_ZhangKeBao_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhangKeBao_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.release.xcconfig"; sourceTree = "<group>"; };
 		560EB9B120AE8D6C0032BA47 /* AbilityTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityTestViewController.h; sourceTree = "<group>"; };
 		560EB9B220AE8D6C0032BA47 /* AbilityTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityTestViewController.m; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		56D0400920B3F93300EF78ED /* TestScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollView.h; sourceTree = "<group>"; };
 		56D0400A20B3F93300EF78ED /* TestScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollView.m; sourceTree = "<group>"; };
 		76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhangKeBao-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student.debug.xcconfig"; sourceTree = "<group>"; };
-		C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhangKeBao-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 				563D91B5208F172C00C91C45 /* AssetsLibrary.framework in Frameworks */,
 				563D91AB208F0BF300C91C45 /* SystemConfiguration.framework in Frameworks */,
 				563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */,
-				3DDA99B9F30C87B497C8E9C2 /* libPods-ZhangKeBao-Student.a in Frameworks */,
+				46ADECF45B69DC5915205426 /* Pods_ZhangKeBao_Student.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 				563D91B4208F172C00C91C45 /* AssetsLibrary.framework */,
 				563D91AA208F0BF300C91C45 /* SystemConfiguration.framework */,
 				563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */,
-				C878EC46259FD110A2A46794 /* libPods-ZhangKeBao-Student.a */,
+				1879F6A7C79AB22CBB2BB3AA /* Pods_ZhangKeBao_Student.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -446,7 +446,7 @@
 				568C5AE7208A10E400742C42 /* Sources */,
 				568C5AE8208A10E500742C42 /* Frameworks */,
 				568C5AE9208A10E500742C42 /* Resources */,
-				90A92F2FDEE00F8659A4D48C /* [CP] Copy Pods Resources */,
+				9A32ED7DF6D2AF93A02C0372 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,22 +579,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		90A92F2FDEE00F8659A4D48C /* [CP] Copy Pods Resources */ = {
+		9A32ED7DF6D2AF93A02C0372 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh",
-				"${PODS_ROOT}/MOFSPickerManager/MOFSPickerManagerDemo/MOFSPickerManager/province_data.xml",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DBSphereTagCloud/DBSphereTagCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/MOFSPickerManager/MOFSPickerManager.framework",
+				"${BUILT_PRODUCTS_DIR}/RadioButton/RadioButton.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/province_data.xml",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DBSphereTagCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOFSPickerManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RadioButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhangKeBao-Student/Pods-ZhangKeBao-Student-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B011B8CAB766BE433DEADFA9 /* [CP] Check Pods Manifest.lock */ = {
@@ -812,6 +820,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -820,10 +829,7 @@
 					"$(PROJECT_DIR)/ZhangKeBao-Student",
 				);
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -835,6 +841,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -843,10 +850,7 @@
 					"$(PROJECT_DIR)/ZhangKeBao-Student",
 				);
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -861,11 +865,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -880,11 +880,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -898,11 +894,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,11 +908,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

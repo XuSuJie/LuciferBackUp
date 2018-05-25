@@ -25,7 +25,7 @@ static NSString * const ID = @"cell";
     collectionView.backgroundColor =[UIColor whiteColor];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    [self.view addSubview:collectionView];
+    //[self.view addSubview:collectionView];
     // 注册cell
     [collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:ID];
     //菜单按钮

@@ -141,6 +141,21 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DBSphereTagCloud/DBSphereTagCloud.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MOFSPickerManager/MOFSPickerManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RadioButton/RadioButton.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DBSphereTagCloud/DBSphereTagCloud.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MOFSPickerManager/MOFSPickerManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RadioButton/RadioButton.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

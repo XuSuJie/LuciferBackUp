@@ -1,0 +1,6 @@
+framework module Pods_ZhangKeBao_Student {
+  umbrella header "Pods-ZhangKeBao-Student-umbrella.h"
+
+  export *
+  module * { export * }
+}
