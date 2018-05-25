@@ -24,11 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(50, 90, 50, 40)];
+    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(50, 90, 100, 40)];
     label.text=@"测试简介";
     [self.view addSubview:label];
     _btn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-100, 350,200, 50)];
-    _btn.titleLabel.text=@"开始测试";
+    [_btn setTitle:@"开始测试" forState:UIControlStateNormal];
     [_btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _btn.backgroundColor=[UIColor blueColor];
     [_btn addTarget:self action:@selector(TestBegin:) forControlEvents:UIControlEventTouchUpInside];

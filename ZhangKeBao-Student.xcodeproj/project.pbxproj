@@ -11,8 +11,9 @@
 		560EB9B520AE8D6D0032BA47 /* AbilityTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560EB9B220AE8D6C0032BA47 /* AbilityTestViewController.m */; };
 		560EB9B620AE8D6D0032BA47 /* AbilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560EB9B320AE8D6C0032BA47 /* AbilityTableViewController.m */; };
 		56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56169C3820976A2000FA65C1 /* MyTableViewController.m */; };
-		5633C38120B47203004A99E6 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5633C38020B47203004A99E6 /* MyView.m */; };
-		5633C38320B66E9B004A99E6 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5633C38220B66E9B004A99E6 /* MyView.xib */; };
+		5633C38320B66E9B004A99E6 /* MyTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5633C38220B66E9B004A99E6 /* MyTestView.xib */; };
+		5633C38620B67805004A99E6 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5633C38420B67804004A99E6 /* unchecked.png */; };
+		5633C38720B67805004A99E6 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5633C38520B67805004A99E6 /* checked.png */; };
 		5635EAF920AC273100C938C6 /* LeftViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAF820AC273100C938C6 /* LeftViewDemo.m */; };
 		5635EAFC20AC2CFB00C938C6 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAFB20AC2CFB00C938C6 /* CoverView.m */; };
 		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
@@ -36,6 +37,7 @@
 		564A881720B137AE006365E8 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 564A881520B137AE006365E8 /* MyTableViewCell.m */; };
 		564A881820B137AE006365E8 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564A881620B137AE006365E8 /* MyTableViewCell.xib */; };
 		564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */; };
+		5657152220B694A100A99EBB /* MyTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5657152120B694A100A99EBB /* MyTestView.m */; };
 		566190A5208F915C007CA9D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566190A4208F915C007CA9D6 /* ViewController.m */; };
 		566190BD208FA42C007CA9D6 /* Next_22px.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190AC208FA42B007CA9D6 /* Next_22px.png */; };
 		566190C4208FA42C007CA9D6 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 566190B5208FA42C007CA9D6 /* 8.png */; };
@@ -94,9 +96,9 @@
 		560EB9B420AE8D6C0032BA47 /* AbilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityTableViewController.h; sourceTree = "<group>"; };
 		56169C3720976A2000FA65C1 /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		56169C3820976A2000FA65C1 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
-		5633C37F20B47203004A99E6 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
-		5633C38020B47203004A99E6 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		5633C38220B66E9B004A99E6 /* MyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
+		5633C38220B66E9B004A99E6 /* MyTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTestView.xib; sourceTree = "<group>"; };
+		5633C38420B67804004A99E6 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		5633C38520B67805004A99E6 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		5635EAF720AC273100C938C6 /* LeftViewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewDemo.h; sourceTree = "<group>"; };
 		5635EAF820AC273100C938C6 /* LeftViewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewDemo.m; sourceTree = "<group>"; };
 		5635EAFA20AC2CFB00C938C6 /* CoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 		564A881620B137AE006365E8 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		564B2A44208B10AE00DA2FF6 /* PersonalMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMessage.h; sourceTree = "<group>"; };
 		564B2A45208B10AE00DA2FF6 /* PersonalMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMessage.m; sourceTree = "<group>"; };
+		5657152020B694A100A99EBB /* MyTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestView.h; sourceTree = "<group>"; };
+		5657152120B694A100A99EBB /* MyTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestView.m; sourceTree = "<group>"; };
 		566190A3208F915C007CA9D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		566190A4208F915C007CA9D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		566190AC208FA42B007CA9D6 /* Next_22px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Next_22px.png; sourceTree = "<group>"; };
@@ -273,9 +277,9 @@
 				560EB9B220AE8D6C0032BA47 /* AbilityTestViewController.m */,
 				56D0400920B3F93300EF78ED /* TestScrollView.h */,
 				56D0400A20B3F93300EF78ED /* TestScrollView.m */,
-				5633C37F20B47203004A99E6 /* MyView.h */,
-				5633C38020B47203004A99E6 /* MyView.m */,
-				5633C38220B66E9B004A99E6 /* MyView.xib */,
+				5633C38220B66E9B004A99E6 /* MyTestView.xib */,
+				5657152020B694A100A99EBB /* MyTestView.h */,
+				5657152120B694A100A99EBB /* MyTestView.m */,
 			);
 			path = Ability;
 			sourceTree = "<group>";
@@ -283,6 +287,8 @@
 		568939712091BF01004E384A /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5633C38520B67805004A99E6 /* checked.png */,
+				5633C38420B67804004A99E6 /* unchecked.png */,
 				56CD0E91209E1D410003FD08 /* 底图@3x.png */,
 				56CD0E90209E1D410003FD08 /* 微信@3x.png */,
 				56CD0E8E209E1D410003FD08 /* logo@3x.png */,
@@ -539,8 +545,9 @@
 				568939702091B9FD004E384A /* 0.png in Resources */,
 				5689396F2091B9FD004E384A /* 7.png in Resources */,
 				5689396B2091B9FD004E384A /* 6.png in Resources */,
+				5633C38720B67805004A99E6 /* checked.png in Resources */,
 				566190C4208FA42C007CA9D6 /* 8.png in Resources */,
-				5633C38320B66E9B004A99E6 /* MyView.xib in Resources */,
+				5633C38320B66E9B004A99E6 /* MyTestView.xib in Resources */,
 				5689396D2091B9FD004E384A /* 3.png in Resources */,
 				568939692091B9FD004E384A /* 2.png in Resources */,
 				56CD0E93209E1D410003FD08 /* QQ@3x.png in Resources */,
@@ -550,6 +557,7 @@
 				5689396E2091B9FD004E384A /* 4.png in Resources */,
 				564A881820B137AE006365E8 /* MyTableViewCell.xib in Resources */,
 				56CD0E92209E1D410003FD08 /* logo@3x.png in Resources */,
+				5633C38620B67805004A99E6 /* unchecked.png in Resources */,
 				568C5AFB208A10EA00742C42 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,7 +625,6 @@
 				56CD0E98209E231B0003FD08 /* MyImage.m in Sources */,
 				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
 				56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */,
-				5633C38120B47203004A99E6 /* MyView.m in Sources */,
 				560EB9B620AE8D6D0032BA47 /* AbilityTableViewController.m in Sources */,
 				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
 				563E4F74209900DB0062BACF /* TableViewInsideViewController.m in Sources */,
@@ -628,6 +635,7 @@
 				568C5B3C208A11D900742C42 /* LoadingView.m in Sources */,
 				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
+				5657152220B694A100A99EBB /* MyTestView.m in Sources */,
 				56D0400B20B3F93300EF78ED /* TestScrollView.m in Sources */,
 				560EB9B520AE8D6D0032BA47 /* AbilityTestViewController.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
