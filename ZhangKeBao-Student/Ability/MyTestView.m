@@ -26,16 +26,12 @@
 */
 - (IBAction)select:(RadioButton*)btn {
     [_qaArray[self.page] setObject:[NSString stringWithFormat:@"%c",(char)(btn.tag+65)] forKey:@"userAnswer"];
-    NSLog(@"选择了%@",_qaArray[self.page][@"userAnswer"]);
-    //判断是否已经全部回答
-    NSInteger i=0;
-    for (NSDictionary* dict in _qaArray) {
-        if([dict[@"userAnswer"] containsString:@"3"])
-            i++;
-    }
-    NSLog(@"回答了%ld道题",10-i);
-    if (i==0) {
-        _confirmBtn.enabled=YES;
-    }
+    //NSLog(@"选择了%@",_qaArray[self.page][@"userAnswer"]);
+//    //判断是否已经全部回答
+//    NSInteger i=0;
+//    for (NSDictionary* dict in _qaArray) {
+//        if([dict[@"userAnswer"] containsString:@"3"])
+//            i++;
+//    }
 }
 @end

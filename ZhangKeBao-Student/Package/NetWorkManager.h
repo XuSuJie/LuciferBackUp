@@ -6,7 +6,7 @@
 //  Copyright © 2018年 fjnu. All rights reserved.
 //
 
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 @interface NetWorkManager : AFHTTPSessionManager
 +(NetWorkManager*)sharedManager;
 @end

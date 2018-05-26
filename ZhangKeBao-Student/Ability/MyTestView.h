@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RadioButton.h>
+#import <RadioButton/RadioButton.h>
 @interface MyTestView : UIView
 @property (strong, nonatomic) IBOutlet UILabel *question;
 @property (strong, nonatomic) IBOutlet RadioButton *RadioButton1;

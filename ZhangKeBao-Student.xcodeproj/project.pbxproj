@@ -16,11 +16,8 @@
 		5633C38720B67805004A99E6 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5633C38520B67805004A99E6 /* checked.png */; };
 		5635EAF920AC273100C938C6 /* LeftViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAF820AC273100C938C6 /* LeftViewDemo.m */; };
 		5635EAFC20AC2CFB00C938C6 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5635EAFB20AC2CFB00C938C6 /* CoverView.m */; };
-		56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F092093014C00239378 /* MyCollectionViewCell.m */; };
-		56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */; };
 		56386F112093014E00239378 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56386F0B2093014D00239378 /* HomePageViewController.m */; };
 		563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */ = {isa = PBXBuildFile; fileRef = 563C2B57208CC7D400F1A17A /* RegisterSucceed.m */; };
-		563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D91A6208EDF4800C91C45 /* drawGraphics.m */; };
 		563D91A9208F0A9800C91C45 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		563D91AB208F0BF300C91C45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91AA208F0BF300C91C45 /* SystemConfiguration.framework */; };
 		563D91B5208F172C00C91C45 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D91B4208F172C00C91C45 /* AssetsLibrary.framework */; };
@@ -54,15 +51,20 @@
 		568C5AFE208A10EA00742C42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5AFD208A10EA00742C42 /* main.m */; };
 		568C5B08208A10EA00742C42 /* ZhangKeBao_StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B07208A10EA00742C42 /* ZhangKeBao_StudentTests.m */; };
 		568C5B13208A10EA00742C42 /* ZhangKeBao_StudentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B12208A10EA00742C42 /* ZhangKeBao_StudentUITests.m */; };
-		568C5B34208A11D900742C42 /* Textfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B27208A11D800742C42 /* Textfield.m */; };
 		568C5B35208A11D900742C42 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B28208A11D800742C42 /* LoginViewController.m */; };
 		568C5B38208A11D900742C42 /* ImputMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2C208A11D800742C42 /* ImputMessage.m */; };
 		568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2D208A11D800742C42 /* RegisterViewController.m */; };
-		568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2E208A11D900742C42 /* AddSpaceView.m */; };
 		568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B2F208A11D900742C42 /* ApplicaionAppend.m */; };
-		568C5B3C208A11D900742C42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B31208A11D900742C42 /* LoadingView.m */; };
-		568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B32208A11D900742C42 /* NetWorkManager.m */; };
 		568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */; };
+		56B41CD920B8FB5400629EFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B41CD820B8FB5400629EFB /* libsqlite3.0.tbd */; };
+		56B41CDC20B8FCC200629EFB /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CDB20B8FCC200629EFB /* Database.m */; };
+		56B41CEB20B8FDB800629EFB /* AddSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CDF20B8FDB700629EFB /* AddSpaceView.m */; };
+		56B41CEC20B8FDB800629EFB /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CE020B8FDB700629EFB /* NetWorkManager.m */; };
+		56B41CED20B8FDB800629EFB /* Textfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CE320B8FDB700629EFB /* Textfield.m */; };
+		56B41CEE20B8FDB800629EFB /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CE520B8FDB700629EFB /* LoadingView.m */; };
+		56B41CEF20B8FDB800629EFB /* MyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CE620B8FDB800629EFB /* MyCollectionViewFlowLayout.m */; };
+		56B41CF020B8FDB800629EFB /* drawGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CE820B8FDB800629EFB /* drawGraphics.m */; };
+		56B41CF120B8FDB800629EFB /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B41CEA20B8FDB800629EFB /* MyCollectionViewCell.m */; };
 		56CD0E92209E1D410003FD08 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E8E209E1D410003FD08 /* logo@3x.png */; };
 		56CD0E93209E1D410003FD08 /* QQ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E8F209E1D410003FD08 /* QQ@3x.png */; };
 		56CD0E94209E1D410003FD08 /* 微信@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD0E90209E1D410003FD08 /* 微信@3x.png */; };
@@ -104,16 +106,10 @@
 		5635EAF820AC273100C938C6 /* LeftViewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewDemo.m; sourceTree = "<group>"; };
 		5635EAFA20AC2CFB00C938C6 /* CoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		5635EAFB20AC2CFB00C938C6 /* CoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
-		56386F092093014C00239378 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
-		56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		56386F0B2093014D00239378 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
-		56386F0C2093014D00239378 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
-		56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		56386F0E2093014E00239378 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		563C2B56208CC7D400F1A17A /* RegisterSucceed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSucceed.h; sourceTree = "<group>"; };
 		563C2B57208CC7D400F1A17A /* RegisterSucceed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSucceed.m; sourceTree = "<group>"; };
-		563D91A5208EDF4800C91C45 /* drawGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawGraphics.h; sourceTree = "<group>"; };
-		563D91A6208EDF4800C91C45 /* drawGraphics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = drawGraphics.m; sourceTree = "<group>"; };
 		563D91A8208F0A9800C91C45 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = "ZhangKeBao-Student/TencentOpenAPI.framework"; sourceTree = "<group>"; };
 		563D91AA208F0BF300C91C45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		563D91B4208F172C00C91C45 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -141,6 +137,7 @@
 		566190A4208F915C007CA9D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		566190AC208FA42B007CA9D6 /* Next_22px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Next_22px.png; sourceTree = "<group>"; };
 		566190B5208FA42C007CA9D6 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		566D100C20B8F5AE005A94CF /* ZhangKeBao-Student-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhangKeBao-Student-Bridging-Header.h"; sourceTree = "<group>"; };
 		568939612091B9FC004E384A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		568939622091B9FC004E384A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		568939632091B9FC004E384A /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
@@ -161,24 +158,33 @@
 		568C5B0E208A10EA00742C42 /* ZhangKeBao-StudentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZhangKeBao-StudentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568C5B12208A10EA00742C42 /* ZhangKeBao_StudentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhangKeBao_StudentUITests.m; sourceTree = "<group>"; };
 		568C5B14208A10EA00742C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		568C5B20208A11D600742C42 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		568C5B22208A11D600742C42 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		568C5B23208A11D600742C42 /* ImputMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImputMessage.h; sourceTree = "<group>"; };
-		568C5B24208A11D700742C42 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
-		568C5B25208A11D700742C42 /* Textfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Textfield.h; sourceTree = "<group>"; };
-		568C5B26208A11D700742C42 /* AddSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceView.h; sourceTree = "<group>"; };
-		568C5B27208A11D800742C42 /* Textfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Textfield.m; sourceTree = "<group>"; };
 		568C5B28208A11D800742C42 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		568C5B2B208A11D800742C42 /* ApplicaionAppend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicaionAppend.h; sourceTree = "<group>"; };
 		568C5B2C208A11D800742C42 /* ImputMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImputMessage.m; sourceTree = "<group>"; };
 		568C5B2D208A11D800742C42 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		568C5B2E208A11D900742C42 /* AddSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceView.m; sourceTree = "<group>"; };
 		568C5B2F208A11D900742C42 /* ApplicaionAppend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicaionAppend.m; sourceTree = "<group>"; };
 		568C5B30208A11D900742C42 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		568C5B31208A11D900742C42 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
-		568C5B32208A11D900742C42 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		568C5B49208A5EBB00742C42 /* ChooseInterestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseInterestViewController.h; sourceTree = "<group>"; };
 		568C5B4A208A5EBB00742C42 /* ChooseInterestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseInterestViewController.m; sourceTree = "<group>"; };
+		56B41CD820B8FB5400629EFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		56B41CDA20B8FCC200629EFB /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Database.h; path = Package/Database.h; sourceTree = "<group>"; };
+		56B41CDB20B8FCC200629EFB /* Database.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Database.m; path = Package/Database.m; sourceTree = "<group>"; };
+		56B41CDD20B8FDB600629EFB /* MyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewFlowLayout.h; path = Package/MyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		56B41CDE20B8FDB700629EFB /* Textfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Textfield.h; path = Package/Textfield.h; sourceTree = "<group>"; };
+		56B41CDF20B8FDB700629EFB /* AddSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddSpaceView.m; path = Package/AddSpaceView.m; sourceTree = "<group>"; };
+		56B41CE020B8FDB700629EFB /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWorkManager.m; path = Package/NetWorkManager.m; sourceTree = "<group>"; };
+		56B41CE120B8FDB700629EFB /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewCell.h; path = Package/MyCollectionViewCell.h; sourceTree = "<group>"; };
+		56B41CE220B8FDB700629EFB /* AddSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddSpaceView.h; path = Package/AddSpaceView.h; sourceTree = "<group>"; };
+		56B41CE320B8FDB700629EFB /* Textfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Textfield.m; path = Package/Textfield.m; sourceTree = "<group>"; };
+		56B41CE420B8FDB700629EFB /* drawGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drawGraphics.h; path = Package/drawGraphics.h; sourceTree = "<group>"; };
+		56B41CE520B8FDB700629EFB /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = Package/LoadingView.m; sourceTree = "<group>"; };
+		56B41CE620B8FDB800629EFB /* MyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewFlowLayout.m; path = Package/MyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		56B41CE720B8FDB800629EFB /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetWorkManager.h; path = Package/NetWorkManager.h; sourceTree = "<group>"; };
+		56B41CE820B8FDB800629EFB /* drawGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = drawGraphics.m; path = Package/drawGraphics.m; sourceTree = "<group>"; };
+		56B41CE920B8FDB800629EFB /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = Package/LoadingView.h; sourceTree = "<group>"; };
+		56B41CEA20B8FDB800629EFB /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewCell.m; path = Package/MyCollectionViewCell.m; sourceTree = "<group>"; };
 		56CD0E8E209E1D410003FD08 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		56CD0E8F209E1D410003FD08 /* QQ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ@3x.png"; sourceTree = "<group>"; };
 		56CD0E90209E1D410003FD08 /* 微信@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@3x.png"; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B41CD920B8FB5400629EFB /* libsqlite3.0.tbd in Frameworks */,
 				563D91C5208F17ED00C91C45 /* libstdc++.tbd in Frameworks */,
 				563D91C1208F177800C91C45 /* Foundation.framework in Frameworks */,
 				563D91BF208F176F00C91C45 /* UIKit.framework in Frameworks */,
@@ -280,6 +287,7 @@
 				5633C38220B66E9B004A99E6 /* MyTestView.xib */,
 				5657152020B694A100A99EBB /* MyTestView.h */,
 				5657152120B694A100A99EBB /* MyTestView.m */,
+				566D100C20B8F5AE005A94CF /* ZhangKeBao-Student-Bridging-Header.h */,
 			);
 			path = Ability;
 			sourceTree = "<group>";
@@ -386,24 +394,26 @@
 		568C5B48208A49D200742C42 /* Package */ = {
 			isa = PBXGroup;
 			children = (
-				56386F0C2093014D00239378 /* MyCollectionViewCell.h */,
-				56386F092093014C00239378 /* MyCollectionViewCell.m */,
-				56386F0D2093014D00239378 /* MyCollectionViewFlowLayout.h */,
-				56386F0A2093014D00239378 /* MyCollectionViewFlowLayout.m */,
-				568C5B26208A11D700742C42 /* AddSpaceView.h */,
-				568C5B2E208A11D900742C42 /* AddSpaceView.m */,
-				568C5B20208A11D600742C42 /* LoadingView.h */,
-				568C5B31208A11D900742C42 /* LoadingView.m */,
-				568C5B24208A11D700742C42 /* NetWorkManager.h */,
-				568C5B32208A11D900742C42 /* NetWorkManager.m */,
-				568C5B25208A11D700742C42 /* Textfield.h */,
-				568C5B27208A11D800742C42 /* Textfield.m */,
-				563D91A5208EDF4800C91C45 /* drawGraphics.h */,
-				563D91A6208EDF4800C91C45 /* drawGraphics.m */,
+				56B41CE220B8FDB700629EFB /* AddSpaceView.h */,
+				56B41CDF20B8FDB700629EFB /* AddSpaceView.m */,
+				56B41CDA20B8FCC200629EFB /* Database.h */,
+				56B41CDB20B8FCC200629EFB /* Database.m */,
+				56B41CE420B8FDB700629EFB /* drawGraphics.h */,
+				56B41CE820B8FDB800629EFB /* drawGraphics.m */,
+				56B41CE920B8FDB800629EFB /* LoadingView.h */,
+				56B41CE520B8FDB700629EFB /* LoadingView.m */,
 				5643B79C209939D900B5F172 /* LoginedUser.h */,
 				5643B79D209939D900B5F172 /* LoginedUser.m */,
+				56B41CE120B8FDB700629EFB /* MyCollectionViewCell.h */,
+				56B41CEA20B8FDB800629EFB /* MyCollectionViewCell.m */,
+				56B41CDD20B8FDB600629EFB /* MyCollectionViewFlowLayout.h */,
+				56B41CE620B8FDB800629EFB /* MyCollectionViewFlowLayout.m */,
 				56CD0E96209E231B0003FD08 /* MyImage.h */,
 				56CD0E97209E231B0003FD08 /* MyImage.m */,
+				56B41CE720B8FDB800629EFB /* NetWorkManager.h */,
+				56B41CE020B8FDB700629EFB /* NetWorkManager.m */,
+				56B41CDE20B8FDB700629EFB /* Textfield.h */,
+				56B41CE320B8FDB700629EFB /* Textfield.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -411,6 +421,7 @@
 		99BAE0C97F71B39FFBCE3F7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56B41CD820B8FB5400629EFB /* libsqlite3.0.tbd */,
 				563D91C4208F17ED00C91C45 /* libstdc++.tbd */,
 				563D91C0208F177800C91C45 /* Foundation.framework */,
 				563D91BE208F176F00C91C45 /* UIKit.framework */,
@@ -504,6 +515,7 @@
 				TargetAttributes = {
 					568C5AEA208A10E500742C42 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					568C5B02208A10EA00742C42 = {
 						CreatedOnToolsVersion = 9.3;
@@ -631,32 +643,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				56CD0E98209E231B0003FD08 /* MyImage.m in Sources */,
-				568C5B3D208A11D900742C42 /* NetWorkManager.m in Sources */,
+				56B41CF120B8FDB800629EFB /* MyCollectionViewCell.m in Sources */,
+				56B41CEE20B8FDB800629EFB /* LoadingView.m in Sources */,
 				56169C3920976A2000FA65C1 /* MyTableViewController.m in Sources */,
 				560EB9B620AE8D6D0032BA47 /* AbilityTableViewController.m in Sources */,
-				568C5B3A208A11D900742C42 /* AddSpaceView.m in Sources */,
 				563E4F74209900DB0062BACF /* TableViewInsideViewController.m in Sources */,
 				568C5AFE208A10EA00742C42 /* main.m in Sources */,
+				56B41CF020B8FDB800629EFB /* drawGraphics.m in Sources */,
 				568C5AF0208A10E500742C42 /* AppDelegate.m in Sources */,
 				5645B1FC20AE75B100893EBD /* AbilityViewController.m in Sources */,
+				56B41CED20B8FDB800629EFB /* Textfield.m in Sources */,
+				56B41CEF20B8FDB800629EFB /* MyCollectionViewFlowLayout.m in Sources */,
+				56B41CEB20B8FDB800629EFB /* AddSpaceView.m in Sources */,
 				568C5B38208A11D900742C42 /* ImputMessage.m in Sources */,
-				568C5B3C208A11D900742C42 /* LoadingView.m in Sources */,
-				568C5B34208A11D900742C42 /* Textfield.m in Sources */,
 				564B2A46208B10AE00DA2FF6 /* PersonalMessage.m in Sources */,
 				5657152220B694A100A99EBB /* MyTestView.m in Sources */,
 				56D0400B20B3F93300EF78ED /* TestScrollView.m in Sources */,
+				56B41CEC20B8FDB800629EFB /* NetWorkManager.m in Sources */,
 				560EB9B520AE8D6D0032BA47 /* AbilityTestViewController.m in Sources */,
+				56B41CDC20B8FCC200629EFB /* Database.m in Sources */,
 				563C2B58208CC7D400F1A17A /* RegisterSucceed.m in Sources */,
 				5643B79E209939D900B5F172 /* LoginedUser.m in Sources */,
 				568C5B35208A11D900742C42 /* LoginViewController.m in Sources */,
 				5635EAF920AC273100C938C6 /* LeftViewDemo.m in Sources */,
 				5635EAFC20AC2CFB00C938C6 /* CoverView.m in Sources */,
-				56386F0F2093014E00239378 /* MyCollectionViewCell.m in Sources */,
-				563D91A7208EDF4800C91C45 /* drawGraphics.m in Sources */,
 				564A881720B137AE006365E8 /* MyTableViewCell.m in Sources */,
 				568C5B39208A11D900742C42 /* RegisterViewController.m in Sources */,
 				56386F112093014E00239378 /* HomePageViewController.m in Sources */,
-				56386F102093014E00239378 /* MyCollectionViewFlowLayout.m in Sources */,
 				568C5B3B208A11D900742C42 /* ApplicaionAppend.m in Sources */,
 				568C5B4C208A5EBB00742C42 /* ChooseInterestViewController.m in Sources */,
 			);
@@ -820,7 +833,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76182A628DAC3A2C18FD57FD /* Pods-ZhangKeBao-Student.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -829,10 +843,29 @@
 					"$(PROJECT_DIR)/ZhangKeBao-Student",
 				);
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Charts\"",
+					"-framework",
+					"\"DBSphereTagCloud\"",
+					"-framework",
+					"\"MOFSPickerManager\"",
+					"-framework",
+					"\"RadioButton\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZhangKeBao-Student/ZhangKeBao-Student-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -841,7 +874,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A5C355E3B5E186E729B5CD2 /* Pods-ZhangKeBao-Student.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -850,10 +884,28 @@
 					"$(PROJECT_DIR)/ZhangKeBao-Student",
 				);
 				INFOPLIST_FILE = "ZhangKeBao-Student/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Charts\"",
+					"-framework",
+					"\"DBSphereTagCloud\"",
+					"-framework",
+					"\"MOFSPickerManager\"",
+					"-framework",
+					"\"RadioButton\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-Student";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZhangKeBao-Student/ZhangKeBao-Student-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -865,7 +917,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -880,7 +936,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -894,7 +954,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -908,7 +972,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X854ZS3G8;
 				INFOPLIST_FILE = "ZhangKeBao-StudentUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fjnu.ZhangKeBao-StudentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

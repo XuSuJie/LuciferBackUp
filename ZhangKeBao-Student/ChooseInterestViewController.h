@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DBSphereView.h>
+
 #import "NetWorkManager.h"
 #import "LoginedUser.h"
 #define BUTTON_SIZE CGRectMake(0,0,40, 30)

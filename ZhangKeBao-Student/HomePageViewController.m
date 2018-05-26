@@ -6,7 +6,7 @@
 //  Copyright © 2018年 fjnu. All rights reserved.
 //
 #import "HomePageViewController.h"
-
+#import <Charts/Charts-Swift.h>
 @implementation HomePageViewController
 static NSString * const ID = @"cell";
 - (void)viewDidLoad {

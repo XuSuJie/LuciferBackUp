@@ -5,7 +5,7 @@
 //  Created by 徐溯杰 on 2018/4/21.
 //  Copyright © 2018年 fjnu. All rights reserved.
 //
-
+#import <DBSphereTagCloud/DBSphereView.h>
 #import "ChooseInterestViewController.h"
 @interface ChooseInterestViewController ()
 

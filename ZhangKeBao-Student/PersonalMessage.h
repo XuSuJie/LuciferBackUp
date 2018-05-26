@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MOFSPickerManager.h>
+#import <MOFSPickerManager/MOFSPickerManager.h>
 #import "LoginedUser.h"
 #import "NetWorkManager.h"
 #import "drawGraphics.h"
