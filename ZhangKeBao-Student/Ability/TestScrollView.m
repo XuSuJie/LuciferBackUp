@@ -9,12 +9,12 @@
 #import "TestScrollView.h"
 
 @interface TestScrollView ()
-@property NSArray* qaArray;
 @property UIButton* btn;
 @end
 
 @implementation TestScrollView
 static const int viewCount = 3;
+#define tablename @"AbilityTestQuestion"
 - (instancetype)init
 {
     self = [super init];
@@ -23,18 +23,43 @@ static const int viewCount = 3;
         _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(50, 430, 240, 30)];
         _viewArray = [[NSMutableArray alloc]init];
         _btn=[[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width/2-50, 630, 100, 35)];
-        _qaArray = @[
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"如果昨天是明天的话就好了，这样今天就周五了。真实的今天可能是星期几？",@"trueanswer" : @"A", @"userAnswer" : @"3", @"tkselect" : @[@"A：星期三", @"B：星期四", @"C：星期五"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"小明被老师赶出来后决定进入IT行业，日以继夜的学习C、C++...，通过不断的努力学习，小明成功入职快递公司成为一名优秀的快递员。小明的做法是正确的么？",@"trueanswer" : @"A", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"既然选择了____________，便只顾____________。",@"trueanswer" : @"B", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"在ARC环境下这段代码为什么不会崩溃",@"questiondescribe" : @"ARC 下 block 没有捕获外部变量，block 代码被放在静态代码区，程序运行后，内存地址不变。", @"trueanswer" : @"B", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题5，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题6，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题7，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题8，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}],
-                     [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题9，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}]
-                     ];
+        _qaArray = [[NSMutableArray alloc]initWithCapacity:10];
+        //数据库数据导入
+        Database* db=[Database defaultDB];
+        [db openDB:@"zkb.sqlite"];//打开数据库
+        //创建表和字段
+        [db createTableWithColumnsType:@"no integer PRIMARY KEY AUTOINCREMENT,question text,trueanswer text,userAnswer text,tkselect blob" tableName:tablename];
+        
+        //for (int i = 0; i<10; i++) {
+           // [db insertSQLWithQuestion:@"'如果昨天是明天的话就好了，这样今天就周五了。真实的今天可能是星期几？'" Trueanswer:@"A" UserAnswer:@"3" Array:@[@"A：星期三", @"B：星期四", @"C：星期五"]];
+        //}
+        
+//        [db insertSQLWithColumnName:@"question,trueanswer,userAnswer" columnValue:@"'如果昨天是明天的话就好了，这样今天就周五了。真实的今天可能是星期几？','A','3'" tableName:tablename];
+//        [db insertSQLWithColumnName:@"tkselect" array:@[@"A：星期三", @"B：星期四", @"C：星期五"] tableName:tablename];
+        sqlite3_stmt *result = [db selectSQLWithColumns:@"question,trueanswer,userAnswer,tkselect" where:nil limit:10 tableName:tablename];
+        while (sqlite3_step(result) == SQLITE_ROW) {
+            NSMutableDictionary* mutDictionary=[[NSMutableDictionary alloc]initWithCapacity:4];
+            char *question_c = (char *)sqlite3_column_text(result,0);
+            char *trueanswer_c = (char *)sqlite3_column_text(result,1);
+            char *userAnswer_c = (char *)sqlite3_column_text(result,2);
+            const void *tkselectData = sqlite3_column_blob(result,3);
+            int size = sqlite3_column_bytes(result, 3);
+            NSData* data = [[NSData alloc]initWithBytes:tkselectData length:size];
+
+            NSString *question = [NSString stringWithUTF8String:question_c];
+            NSString *trueanswer = [NSString stringWithUTF8String:trueanswer_c];
+            NSString *userAnswer = [NSString stringWithUTF8String:userAnswer_c];
+            NSArray* tkselect=[NSKeyedUnarchiver unarchiveObjectWithData:data];
+
+            [mutDictionary setObject:question forKey:@"question"];
+            [mutDictionary setObject:trueanswer forKey:@"trueanswer"];
+            [mutDictionary setObject:userAnswer forKey:@"userAnswer"];
+            [mutDictionary setObject:tkselect forKey:@"tkselect"];
+            [_qaArray addObject:mutDictionary];
+            //数组存字典,字典存字符串和数组
+        }
+        sqlite3_finalize(result);
+//      [[NSMutableDictionary alloc]initWithDictionary:@{@"question" : @"这里是问题9，这道题的答案是",@"trueanswer" : @"C", @"userAnswer" : @"3", @"tkselect" :@[@"A：选项A", @"B：选项B", @"C：选项C"]}]
     }
     return self;
 }

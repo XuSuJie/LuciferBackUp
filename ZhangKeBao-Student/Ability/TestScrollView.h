@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MyTestView.h"
+#import "Database.h"
 #import <RadioButton/RadioButton.h>
 #define SCREEN_SIZE   [UIScreen mainScreen].bounds.size
 @interface TestScrollView : UIViewController<UIScrollViewDelegate>
-@property(strong,nonatomic)UIPageControl* pageControl;
-@property(strong,nonatomic)UIScrollView * scrollView;
-@property(strong,nonatomic)NSMutableArray* viewArray;
+@property(strong,nonatomic) NSMutableArray* qaArray;
+@property(strong,nonatomic) UIPageControl* pageControl;
+@property(strong,nonatomic) UIScrollView * scrollView;
+@property(strong,nonatomic) NSMutableArray* viewArray;
 
 @end

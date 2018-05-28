@@ -25,10 +25,10 @@
     [btn setTitle:@"开始能测" forState:UIControlStateNormal];
     btn.layer.masksToBounds=YES;
     btn.layer.cornerRadius=10;
-    [btn addTarget:self action:@selector(TestBegin) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(EntryTest) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
--(void)TestBegin{
+-(void)EntryTest{
     AbilityTableViewController* tableView=[[AbilityTableViewController alloc]init];
     [self.navigationController pushViewController:tableView animated:YES];
 }
